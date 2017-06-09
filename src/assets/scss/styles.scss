@@ -1,6 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
-  height:1080px;
-  width:1024px;
-  background-color: coral;
-}
+@import 'generic.box-sizing';
+@import 'settings.fonts';
+@import 'base.page';
