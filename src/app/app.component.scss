@@ -1,1 +1,12 @@
-
+@import '../assets/scss/settings.colors';
+@import '../assets/scss/_settings.globals';
+.header {
+    position: fixed;
+    width: 100%;
+    height: $header-height;
+    left: 0;
+    margin-left: 0;
+    background: linear-gradient(to right, $gradientStartColor, $gradientEndColor);
+    color: $primaryBackgroundColor;
+    transform: translate3d(0,0,0);
+}

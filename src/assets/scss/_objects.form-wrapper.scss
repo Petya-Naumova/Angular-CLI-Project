@@ -1,0 +1,12 @@
+.o-form-wrapper {
+    padding-top: 5rem;
+
+    &__checkbox--blue {
+        display: block;
+        margin-bottom: 4rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
