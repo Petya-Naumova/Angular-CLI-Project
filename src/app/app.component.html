@@ -1,14 +1,14 @@
 <div class="container-fluid">
   <header class="header row row--no-padding middle-xs">
-    <nav role="navigation" class="">
-      <ul class="">
-        <li>
+    <nav role="navigation" class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__list-item">
           <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
         </li>
-        <li>
+        <li class="main-nav__list-item">
           <a routerLink="/add-recipes" routerLinkActive="active">Add New Recipe</a>
         </li>
-        <li>
+        <li class="main-nav__list-item">
           <a routerLink="/search-recipes" routerLinkActive="active">Search Recipes</a>
         </li>
       </ul>
@@ -16,3 +16,4 @@
     <router-outlet></router-outlet>
   </header>
 </div>
+

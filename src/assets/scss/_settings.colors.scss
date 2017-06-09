@@ -2,6 +2,7 @@
 $primaryTextColor: #222;
 $primaryTextColorWithOpacity: rgba(34,34,34, .5);
 $secondaryTextColor: #fff;
+$linkItemsTextColor: #55A0EB;
 $primaryInfoTextColor: #afafaf;
 $secondaryInfoTextColor: #3a4a53;
 $labelTextColor: #7d7d7d;
@@ -12,7 +13,7 @@ $inputPlaceholderTextColor: rgba(0, 0, 0, .5);
 $buttonDisableTextColor: rgba(0, 128, 199, .5);
 $labelDisabledColor: rgba(34, 34, 2, .5);
 
-$primaryBackgroundColor: #fff;
+$primaryBackgroundColor: #fbfbfb;
 $secondaryBackgroundColor: #f4f6f9;
 $headerNavBackgroundColor: #f8f9fc;
 
@@ -24,8 +25,8 @@ $successColor: #78d52c;
 $infoColor: #2f96b4;
 $warningColor: #f89406;
 
-$gradientStartColor: #1eb0ff;
-$gradientEndColor: #0080c7;
+$gradientStartColor: #fbfbfb;
+$gradientEndColor: #fff;
 
 $gradientAddStartColor: #78d52c;
 $gradientAddEndColor: #4faf00;
@@ -36,3 +37,4 @@ $primaryOddRowBackgroundColor: #fafafa;
 $secondaryOddRowBackgroundColor: #fcfcfc;
 
 $toastBorderColor: #bfcbdf;
+$boxShadowColor: #e4e4e4;
