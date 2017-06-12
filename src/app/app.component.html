@@ -1,19 +1,18 @@
 <div class="container-fluid">
-  <header class="header row row--no-padding middle-xs">
-    <nav role="navigation" class="main-nav">
-      <ul class="main-nav__list">
-        <li class="main-nav__list-item">
-          <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-        </li>
-        <li class="main-nav__list-item">
-          <a routerLink="/add-recipes" routerLinkActive="active">Add New Recipe</a>
-        </li>
-        <li class="main-nav__list-item">
-          <a routerLink="/search-recipes" routerLinkActive="active">Search Recipes</a>
-        </li>
-      </ul>
+    <header class="header">
+    <nav role="navigation" class="main-nav column center-xs middle-xs">
+        <ul class="main-nav__list">
+            <li class="main-nav__list-item">
+                <a class="main-nav__list-item--link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+            </li>
+            <li class="main-nav__list-item">
+                <a class="main-nav__list-item--link" routerLink="/add-recipes" routerLinkActive="active">Add New Recipe</a>
+            </li>
+            <li class="main-nav__list-item">
+                <a class="main-nav__list-item--link" routerLink="/search-recipes" routerLinkActive="active">Search Recipes</a>
+            </li>
+        </ul>
     </nav>
-    <router-outlet></router-outlet>
-  </header>
+        <router-outlet></router-outlet>
+    </header>
 </div>
-

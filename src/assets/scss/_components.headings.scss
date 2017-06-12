@@ -1,25 +1,19 @@
 .c-heading {
     font-family: $fontLight;
     font-size: $fontSizeHeading;
-
     &--big {
         font-size: $fontSizeHuge;
     }
-
     &--medium {
         font-size: $fontSizeTitle;
     }
-
     &--small {
         font-size: $fontSizeMedium;
     }
-
     &--heading {
         font-size: $fontSizeHeading;
     }
-
     &--info {
         color: $primaryInfoTextColor;
     }
-
 }

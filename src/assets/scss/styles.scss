@@ -1,33 +1,23 @@
-// Settings - variables, configs
+//Settings - variables, configs
 @import 'settings.colors';
 @import 'settings.globals';
 @import 'settings.fonts';
 @import 'settings.grid';
-
-// Mixins, helpers
-
-
-// Resets, globals
+//Mixins, helpers
+//Resets, globals
 @import 'generic.reset';
 @import 'generic.box-sizing';
-
 // HTML unclassed elements
 @import 'base.app-root';
 @import 'base.page';
 @import 'base.inputs';
 @import 'base.buttons';
-
 // Agnostically named classes with no cosmetics
 @import 'objects.form-wrapper';
-
 // Reusable designed pieces of UI
 @import 'components.headings';
 @import 'components.buttons';
-
-// Page specific styles
-@import "src/app/app.component";
-
-// Overrides, helpers, utilities
+//Page specific styles
+@import 'src/app/app.component';
+//Overrides, helpers, utilities
 @import 'tools.grid';
-
-

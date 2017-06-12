@@ -14,38 +14,31 @@
     position: relative;
     text-align: center;
     text-decoration: none;
-
     &--shadow {
         background: $secondaryBackgroundColor;
         border: 1px solid $primaryBorderColor;
         padding: 0 $button-side-padding-with-border;
         transition: border $defaultTransitionTime ease;
-
         &:not([disabled]):hover,
         &:not([disabled]):focus,
         &.is-active {
             background-color: $primaryBackgroundColor;
             border-color: $gradientStartColor;
         }
-
         &--white:not([disabled]) {
             background-color: $primaryBackgroundColor;
         }
-
         &--delete {
             color: $errorColor;
-
             &:not([disabled]):hover,
             &:not([disabled]):focus {
                 border-color: $errorColor;
             }
         }
     }
-
     &--primary {
         overflow: hidden;
         transform: translate3d(0, 0, 0);
-
         &:after {
             content: '';
             background: linear-gradient(to right, $gradientStartColor 60%, $gradientEndColor 100%);
@@ -59,41 +52,34 @@
             width: 200%;
             z-index: -1;
         }
-
         &:not([disabled]):hover:after,
         &:not([disabled]):focus:after {
             transform: translateX(0);
         }
-
         &--add {
             &:after {
                 background: linear-gradient(to right, $gradientAddStartColor 60%, $gradientAddEndColor 100%);
             }
         }
-
         &--warning {
             &:after {
                 background: linear-gradient(to right, $gradientWarningStartColor 60%, $gradientWarningEndColor 100%);
             }
         }
     }
-
     &--search {
         position: absolute;
         top: 1px;
         right: 2.1rem;
         height: 4rem;
         //z-index: 20;
-
         &:after {
             background: white;
         }
     }
-
     &--no-width {
         min-width: 0;
     }
-
     &--icon {
         align-items: center;
         background-color: $primaryBackgroundColor;
@@ -106,28 +92,23 @@
         padding: 5px;
         transition: border $defaultTransitionTime ease;
         width: 32px;
-
         &:not([disabled]):hover,
         &:not([disabled]):focus {
             border-color: $gradientStartColor;
         }
     }
-
     &--margin {
         margin-left: 3rem;
     }
-
     &[disabled] {
         background-color: $secondaryOddRowBackgroundColor;
         border: 1px solid $disableBorderColor;
         color: $buttonDisableTextColor;
         cursor: default;
-
         &:after {
             content: none;
         }
     }
-
     &.with-red-dot {
         &:after {
             background-color: $errorColor;
@@ -151,7 +132,6 @@
     font-size: $fontSizeHeading;
     transition: color $defaultTransitionTime ease;
     text-decoration: none;
-
     &:hover:not([disabled]) {
         color: $gradientStartColor;
     }
