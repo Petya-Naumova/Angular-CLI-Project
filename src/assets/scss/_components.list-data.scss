@@ -1,0 +1,64 @@
+.c-list-data {
+
+    &__container {
+        background-color: $secondaryBackgroundColor;
+        border-top: 2px solid $primaryBorderColor;
+        display: block;
+        flex: none;
+        padding-top: 3rem;
+        position: relative;
+
+    }
+
+    &__border-top {
+        border-top: 1px solid $primaryBorderColor;
+    }
+
+    &__header,
+    &__row {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        position: relative;
+    }
+
+    &__header {
+        border: 1px solid transparent;
+        padding-bottom: 2rem;
+    }
+
+    &__row {
+        border: 1px solid $tableBorder;
+        border-bottom: none;
+        line-height: 2.4rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+
+        &:last-child {
+            border-bottom: 1px solid $tableBorder;
+        }
+
+        &--with-hover:hover,
+        &--with-hover:focus {
+            box-shadow: 0 10px 15px -7px rgba(0,0,0,.1);
+            z-index: 1;
+        }
+
+        &:nth-child(2n) {
+            background-color: $secondaryOddRowBackgroundColor;
+        }
+
+        .c-button--icon {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__label {
+            color: $tableLabelColor;
+            font-size: $fontSizeSmall;
+            font-family: $fontItalic;
+            line-height: 1.8rem;
+        }
+    }
+
+}
+

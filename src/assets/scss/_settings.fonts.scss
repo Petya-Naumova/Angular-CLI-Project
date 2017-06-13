@@ -1,50 +1,35 @@
 // Include fonts
 @font-face {
-    font-family: 'OpenSans-Regular';
-    src: url('/../../fonts/OpenSans-Regular.woff2') format('woff2'),
-         url('/../../fonts/OpenSans-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'WorkSans-Regular';
+    src: url('/../../fonts/WorkSans-Regular.ttf') format('ttf')
 }
 
 @font-face {
-    font-family: 'OpenSans-Bold';
-    src: url('/../../fonts/OpenSans-Bold.woff2') format('woff2'),
-         url('/../../fonts/OpenSans-Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'WorkSans-Bold';
+    src: url('/../../fonts/WorkSans-Bold.ttf') format('ttf')
 }
 
 @font-face {
-    font-family: 'OpenSans-Semibold';
-    src: url('/../../fonts/OpenSans-Semibold.woff2') format('woff2'),
-         url('/../../fonts/OpenSans-Semibold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'WorkSans-Semibold';
+    src: url('/../../fonts/WorkSans-Semibold.ttf') format('ttf')
 }
 
 @font-face {
-    font-family: 'OpenSans-Light';
-    src: url('/../../fonts/OpenSans-Light.woff2') format('woff2'),
-         url('/../../fonts/OpenSans-Light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'WorkSans-Light';
+    src: url('/../../fonts/WorkSans-Light.ttf') format('ttf')
 }
 
 @font-face {
-    font-family: 'OpenSans-Italic';
-    src: url('/../../fonts/OpenSans-Italic.woff2') format('woff2'),
-         url('/../../fonts/OpenSans-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'WorkSans-Italic';
+    src: url('/../../fonts/WorkSans-Italic.ttf') format('ttf')
 }
 
 // Define font family variables
-$fontRegular: 'OpenSans-Regular', sans-serif;
-$fontSemibold: 'OpenSans-Semibold', sans-serif;
-$fontBold: 'OpenSans-Bold', sans-serif;
-$fontLight: 'OpenSans-Light', sans-serif;
-$fontItalic: 'OpenSans-Italic', sans-serif;
+$fontRegular: 'WorkSans-Regular', sans-serif;
+$fontSemibold: 'WorkSans-Semibold', sans-serif;
+$fontBold: 'WorkSans-Bold', sans-serif;
+$fontLight: 'WorkSans-Light', sans-serif;
+$fontItalic: 'WorkSans-Italic', sans-serif;
 
 // Define font sizes
 $fontSizeSmall: 1.2rem;

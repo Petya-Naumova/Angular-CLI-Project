@@ -3,6 +3,7 @@
 @import 'settings.globals';
 @import 'settings.fonts';
 @import 'settings.grid';
+@import 'settings.message-formatting';
 //Mixins, helpers
 //Resets, globals
 @import 'generic.reset';
@@ -14,9 +15,12 @@
 @import 'base.buttons';
 // Agnostically named classes with no cosmetics
 @import 'objects.form-wrapper';
-// Reusable designed pieces of UI
+@import 'objects.footer';
+// Reusable designed pieces of UI\
+
 @import 'components.headings';
 @import 'components.buttons';
+@import 'components.list-data';
 //Page specific styles
 @import 'src/app/app.component';
 //Overrides, helpers, utilities

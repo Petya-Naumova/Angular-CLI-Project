@@ -1,0 +1,16 @@
+.o-footer {
+    background-color: $secondaryOddRowBackgroundColor;
+    border-top: 1px solid $primaryBorderColor;
+    flex: none;
+    padding-bottom: 15rem;
+    padding-top: 5rem;
+
+    &__info {
+        padding-bottom: 5rem;
+        text-align: center;
+
+        &--error {
+            color: $errorColor;
+        }
+    }
+}
