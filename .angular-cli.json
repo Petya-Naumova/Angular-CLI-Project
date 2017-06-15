@@ -18,8 +18,7 @@
         "testTsconfig": "tsconfig.spec.json",
         "prefix": "app",
         "styles": [
-            "../src/assets/scss/styles.scss",
-            "../node_modules/roboto-fontface/css/roboto/roboto-fontface.css"
+            "../src/assets/scss/styles.scss"
         ],
         "scripts": [],
         "environmentSource": "environments/environment.ts",

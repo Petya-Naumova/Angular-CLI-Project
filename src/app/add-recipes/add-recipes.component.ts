@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
   moduleId: module.id,
   selector: 'app-add-recipes',
   templateUrl: './add-recipes.component.html'
-  //  styleUrls: ['./add-recipes.component.scss']
 })
 export class AddRecipesComponent {
 
