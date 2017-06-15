@@ -1,3 +1,4 @@
+
 .header {
     position: fixed;
     width: 100%;
@@ -7,36 +8,53 @@
     transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
 
     .main-nav {
-
         height: 100%;
 
         &__list-item {
             display: inline-block;
-            font-size: 1.5rem;
-            font-family: $fontRegular;
-            font-weight: 600;
-            text-transform: uppercase;
+            position: relative;
+            z-index: 0;
+            margin: 2rem;
 
             &--link {
-                font-family: $fontRegular;
-                transition: 0.4s;
-                color: $linkItemsTextColor;
+                display: inline-block;
                 text-decoration: none;
-                padding: 2.2rem 2rem;
-                margin: 0;
-               // box-shadow: 0 0 4px 0 $boxShadowColor;  
-            }
-
-            &--link.active {
-                font-family: $fontRegular;
-                transition: 0.4s;
-                color: $secondaryTextColor;
-                background-color: $linkItemsTextColor;
-            }
-
-            &--link:hover {
-                background-color: $tableBorder;
+                font-family: 'Pangolin', cursive;
                 color: $linkItemsTextColor;
+                letter-spacing: .05em;
+                font-weight: 600;
+                margin: 0 2rem;
+                padding: 1rem 1rem;
+                font-size: 1.7rem;
+   
+            }
+
+            &--link:before, &--link:after {
+
+                position: absolute;
+                left: 0px;
+                width: 100%;
+                height: 2px;
+                background-color: #9b9fa1;
+                content: "";
+                opacity: 0;
+                transition: all 0.3s;
+            }
+
+            &--link:before {
+                top: 0;
+                transform: translateY(10px);
+            }
+
+            
+            &--link:after {
+                bottom: 0;
+                transform: translateY(-10px);
+            }
+
+            &--link:hover:before, &--link:hover:after {
+                opacity: 1;
+                transform: translateY(0px);
             }
 
         }
