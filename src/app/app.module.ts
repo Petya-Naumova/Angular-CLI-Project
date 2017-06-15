@@ -7,7 +7,7 @@ import { LocalStorageModule } from 'angular-2-local-storage';
 
 // Components
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { RecipesComponent } from './recipes/recipes.component';
 import { AddRecipesComponent } from './add-recipes/add-recipes.component';
 import { SearchRecipesComponent } from './search-recipes/search-recipes.component';
 import { HideOnScrollDirective } from './hide-on-scroll.directive';
@@ -15,7 +15,7 @@ import { HideOnScrollDirective } from './hide-on-scroll.directive';
 
 @NgModule({
   declarations: [
-    AppComponent, DashboardComponent, AddRecipesComponent, SearchRecipesComponent, HideOnScrollDirective
+    AppComponent, RecipesComponent, AddRecipesComponent, SearchRecipesComponent, HideOnScrollDirective
   ],
   imports: [
     BrowserModule,
