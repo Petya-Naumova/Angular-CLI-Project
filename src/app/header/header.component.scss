@@ -1,0 +1,65 @@
+.header {
+    position: fixed;
+    width: 100%;
+    height: $header-height;
+    left: 0;
+    box-shadow: 0 0 7px $boxShadowColor;
+    transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+    &__logo {
+        background-image: url('#{$imagesPath}/board.svg');
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: 13rem;
+        width: 24rem;
+    }
+    &__logo-container {
+        align-self: flex-end;
+    }
+    .main-nav {
+        height: 100%;
+        &__container {
+            align-self: flex-start;
+        }
+        &__list-item {
+            display: inline-block;
+            position: relative;
+            z-index: 0;
+            margin: 2rem;
+            &--link {
+                display: inline-block;
+                text-decoration: none;
+                font-family: 'Pangolin', cursive;
+                color: $linkItemsTextColor;
+                letter-spacing: .05em;
+                font-weight: 600;
+                margin: 0 2rem;
+                padding: 1.6rem 1rem;
+                font-size: 1.7rem;
+            }
+            &--link:before,
+            &--link:after {
+                position: absolute;
+                left: 0px;
+                width: 100%;
+                height: 2px;
+                background-color: #9b9fa1;
+                content: "";
+                opacity: 0;
+                transition: all 0.3s;
+            }
+            &--link:before {
+                top: 0;
+                transform: translateY(10px);
+            }
+            &--link:after {
+                bottom: 0;
+                transform: translateY(-10px);
+            }
+            &--link:hover:before,
+            &--link:hover:after {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    }
+}

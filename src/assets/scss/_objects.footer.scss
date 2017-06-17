@@ -2,15 +2,16 @@
     background-color: $secondaryOddRowBackgroundColor;
     border-top: 1px solid $primaryBorderColor;
     flex: none;
-    padding-bottom: 15rem;
-    padding-top: 5rem;
-
+    padding-bottom: 6rem;
+    padding-top: 2rem;
     &__info {
         padding-bottom: 5rem;
         text-align: center;
-
         &--error {
             color: $errorColor;
         }
+    }
+    .cr {
+        align-self: flex-end;
     }
 }

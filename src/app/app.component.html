@@ -1,22 +1,8 @@
-<div class="container-fluid">
-    <header class="header">
-
-        <nav role="navigation" class="main-nav column center-xs middle-xs">
-            <div class="col-xs-2 header__logo-container">
-                <a routerLink="/" routerLinkActive="active" class="header__logo"></a>
-            </div>
-            <div class="col-xs-8 main-nav__container">
-                <div class="main-nav__list-item">
-                    <a class="main-nav__list-item--link" routerLink="/recipes" routerLinkActive="active">See All Recipes</a>
-                </div>
-                <div class="main-nav__list-item">
-                    <a class="main-nav__list-item--link" routerLink="/add-recipes" routerLinkActive="active">Add New Recipe</a>
-                </div>
-                <div class="main-nav__list-item">
-                    <a class="main-nav__list-item--link" routerLink="/search-recipes" routerLinkActive="active">Search Recipes</a>
-                </div>
-            </div>
-        </nav>
-        <router-outlet></router-outlet>
-    </header>
+<app-header></app-header>
+<div class="container">
+    <div class="row row--no-margin center-xs middle-xs">
+        <div class="col-xs-12">
+        </div>
+    </div>
 </div>
+<app-footer></app-footer>

@@ -5,67 +5,35 @@
     color: $secondaryTextColor;
     cursor: pointer;
     display: inline-block;
-    font-family: $fontBold;
-    font-size: $fontSizeRegular;
+    font-family: $fontPangolinRegular;
+    font-size: 1.7rem;
+    letter-spacing: .05em;
+    font-weight: 600;
     height: $button-height;
     line-height: $button-height;
-    min-width: 19rem;
+    min-width: 15rem;
     padding: 0 $button-side-padding-without-border;
     position: relative;
     text-align: center;
     text-decoration: none;
-    &--shadow {
-        background: $secondaryBackgroundColor;
-        border: 1px solid $primaryBorderColor;
-        padding: 0 $button-side-padding-with-border;
-        transition: border $defaultTransitionTime ease;
-        &:not([disabled]):hover,
-        &:not([disabled]):focus,
-        &.is-active {
-            background-color: $primaryBackgroundColor;
-            border-color: $gradientStartColor;
-        }
-        &--white:not([disabled]) {
-            background-color: $primaryBackgroundColor;
-        }
-        &--delete {
-            color: $errorColor;
-            &:not([disabled]):hover,
-            &:not([disabled]):focus {
-                border-color: $errorColor;
-            }
-        }
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    &:after {
+        content: '';
+        background: linear-gradient(to right, $gradientAddStartColor 60%, $gradientAddEndColor 100%);
+        height: $button-height;
+        display: inline-block;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+        transition: transform .5s ease;
+        width: 200%;
+        z-index: -1;
     }
-    &--primary {
-        overflow: hidden;
-        transform: translate3d(0, 0, 0);
-        &:after {
-            content: '';
-            background: linear-gradient(to right, $gradientStartColor 60%, $gradientEndColor 100%);
-            height: $button-height;
-            display: inline-block;
-            left: 0;
-            position: absolute;
-            top: 0;
-            transform: translateX(-50%);
-            transition: transform .5s ease;
-            width: 200%;
-            z-index: -1;
-        }
-        &:not([disabled]):hover:after,
-        &:not([disabled]):focus:after {
-            transform: translateX(0);
-        }
-        &--add {
-            &:after {
-                background: linear-gradient(to right, $gradientAddStartColor 60%, $gradientAddEndColor 100%);
-            }
-        }
-        &--warning {
-            &:after {
-                background: linear-gradient(to right, $gradientWarningStartColor 60%, $gradientWarningEndColor 100%);
-            }
-        }
+    &:not([disabled]):hover:after,
+    &:not([disabled]):focus:after {
+        transform: translateX(0);
     }
     &--search {
         position: absolute;
@@ -77,29 +45,6 @@
             background: white;
         }
     }
-    &--no-width {
-        min-width: 0;
-    }
-    &--icon {
-        align-items: center;
-        background-color: $primaryBackgroundColor;
-        border: 1px solid $primaryBorderColor;
-        display: flex;
-        height: 32px;
-        justify-content: center;
-        line-height: 32px;
-        min-width: 0;
-        padding: 5px;
-        transition: border $defaultTransitionTime ease;
-        width: 32px;
-        &:not([disabled]):hover,
-        &:not([disabled]):focus {
-            border-color: $gradientStartColor;
-        }
-    }
-    &--margin {
-        margin-left: 3rem;
-    }
     &[disabled] {
         background-color: $secondaryOddRowBackgroundColor;
         border: 1px solid $disableBorderColor;
@@ -108,31 +53,5 @@
         &:after {
             content: none;
         }
-    }
-    &.with-red-dot {
-        &:after {
-            background-color: $errorColor;
-            border: 2px solid $primaryBackgroundColor;
-            border-radius: 50%;
-            content: '';
-            display: block;
-            height: 6px;
-            position: absolute;
-            right: 1px;
-            top: 1px;
-            transform: translate(50%, -50%);
-            width: 6px;
-        }
-    }
-}
-
-.c-close-button {
-    color: $toastBorderColor;
-    cursor: pointer;
-    font-size: $fontSizeHeading;
-    transition: color $defaultTransitionTime ease;
-    text-decoration: none;
-    &:hover:not([disabled]) {
-        color: $gradientStartColor;
     }
 }

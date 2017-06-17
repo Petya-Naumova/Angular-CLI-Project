@@ -24,21 +24,24 @@
     src: url('/../../fonts/WorkSans-Italic.ttf') format('ttf')
 }
 
-
 @font-face {
     font-family: 'Pangolin';
     src: url('/../../fonts/Pangolin-Regular.ttf') format('ttf')
 }
 
-
 // Define font family variables
-$fontRegular: 'WorkSans-Regular', sans-serif;
-$fontSemibold: 'WorkSans-Semibold', sans-serif;
-$fontBold: 'WorkSans-Bold', sans-serif;
-$fontLight: 'WorkSans-Light', sans-serif;
-$fontItalic: 'WorkSans-Italic', sans-serif;
-$fontPangolinRegular: 'Pangolin', cursive;
-
+$fontRegular: 'WorkSans-Regular',
+sans-serif;
+$fontSemibold: 'WorkSans-Semibold',
+sans-serif;
+$fontBold: 'WorkSans-Bold',
+sans-serif;
+$fontLight: 'WorkSans-Light',
+sans-serif;
+$fontItalic: 'WorkSans-Italic',
+sans-serif;
+$fontPangolinRegular: 'Pangolin',
+cursive;
 // Define font sizes
 $fontSizeSmall: 1.2rem;
 $fontSizeRegular: 1.4rem;
