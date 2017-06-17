@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RecipesComponent } from './recipes/recipes.component';
-import { IngredientComponent } from './recipes/recipe-list/recipe-item/ingredient/ingredient.component';
 import { SearchRecipesComponent } from './search-recipes/search-recipes.component';
 import { HideOnScrollDirective } from './hide-on-scroll.directive';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
@@ -23,8 +22,7 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
   declarations: [
     AppComponent,
     HeaderComponent,
-    RecipesComponent, 
-    IngredientComponent, 
+    RecipesComponent,
     SearchRecipesComponent, 
     HideOnScrollDirective, 
     RecipeListComponent, 
