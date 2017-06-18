@@ -6,7 +6,7 @@ import { ManageRecipesComponent } from './manage-recipes/manage-recipes.componen
 const routes: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full' },
   { path: 'recipes',  component: RecipesComponent },
-  { path: 'search-recipes', component: ManageRecipesComponent }
+  { path: 'manage-recipes', component: ManageRecipesComponent }
 ];
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],

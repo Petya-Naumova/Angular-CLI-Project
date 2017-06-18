@@ -1,9 +1,8 @@
-<div class="row">
+<div class="c-list-data__row row row--no-margin first-xs">
     <div class="col-xs-10">
         <app-edit></app-edit>
-        <hr>
-        <ul>
-            <a href="#" *ngFor="let ingredient of ingredients">
+        <ul class="list-group">
+            <a class="list-group-item" *ngFor="let ingredient of ingredients">
             {{ ingredient.name }} ({{ ingredient.amount }})</a>
         </ul>
     </div>

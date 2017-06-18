@@ -8,5 +8,5 @@ body {
     display: flex;
     font-size: $fontSizeRegular;
     font-family: $fontRegular;
-    background: linear-gradient(45deg, rgba(153, 218, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
+    background-color: $primaryBackgroundColor;
 }

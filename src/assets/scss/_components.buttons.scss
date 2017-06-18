@@ -1,57 +1,68 @@
-.c-button {
-    background: none;
-    border: none;
-    border-radius: $button-border-radius;
-    color: $secondaryTextColor;
-    cursor: pointer;
-    display: inline-block;
-    font-family: $fontPangolinRegular;
-    font-size: 1.7rem;
-    letter-spacing: .05em;
-    font-weight: 600;
-    height: $button-height;
-    line-height: $button-height;
-    min-width: 15rem;
-    padding: 0 $button-side-padding-without-border;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    overflow: hidden;
-    transform: translate3d(0, 0, 0);
-    &:after {
-        content: '';
-        background: linear-gradient(to right, $gradientAddStartColor 60%, $gradientAddEndColor 100%);
-        height: $button-height;
-        display: inline-block;
-        left: 0;
-        position: absolute;
-        top: 0;
-        transform: translateX(-50%);
-        transition: transform .5s ease;
-        width: 200%;
-        z-index: -1;
-    }
-    &:not([disabled]):hover:after,
-    &:not([disabled]):focus:after {
-        transform: translateX(0);
-    }
-    &--search {
-        position: absolute;
-        top: 1px;
-        right: 2.1rem;
-        height: 4rem;
-        //z-index: 20;
-        &:after {
-            background: white;
-        }
-    }
-    &[disabled] {
-        background-color: $secondaryOddRowBackgroundColor;
-        border: 1px solid $disableBorderColor;
-        color: $buttonDisableTextColor;
-        cursor: default;
-        &:after {
-            content: none;
-        }
-    }
-}
+            .c-button {
+                background: none;
+                border: none;
+                border-radius: $button-border-radius;
+                color: $secondaryTextColor;
+                cursor: pointer;
+                display: inline-block;
+                font-family: $fontPangolinRegular;
+                font-size: 1.7rem;
+                letter-spacing: .05em;
+                font-weight: 600;
+                height: $button-height;
+                line-height: $button-height;
+                min-width: 15rem;
+                padding: 0 $button-side-padding-without-border;
+                position: relative;
+                text-align: center;
+                text-decoration: none;
+                overflow: hidden;
+                transform: translate3d(0, 0, 0);
+                &:after {
+                    content: '';
+                    background: linear-gradient(to right, $gradientAddStartColor 60%, $gradientAddEndColor 100%);
+                    height: $button-height;
+                    display: inline-block;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    transform: translateX(-50%);
+                    transition: transform .5s ease;
+                    width: 200%;
+                    z-index: -1;
+                }
+                &:not([disabled]):hover:after,
+                &:not([disabled]):focus:after {
+                    transform: translateX(0);
+                }
+                &--add {
+                    @extend .c-button;
+                    min-width: 10rem;
+                    &:after {
+                        background: linear-gradient(to bottom, #2ecc71, #2ecc71);
+                    }
+                }
+                &--delete {
+                    @extend .c-button;
+                    min-width: 10rem;
+                    &:after {
+                        background: linear-gradient(to bottom, #c0392b, #c0392b);
+                    }
+                }
+                &--clear {
+                    @extend .c-button;
+                    min-width: 10rem;
+                    &:after {
+                        background: linear-gradient(to bottom, #95a5a6, #95a5a6);
+                    }
+                }
+                &[disabled] {
+                    background-color: $secondaryOddRowBackgroundColor;
+                    border: 1px solid $disableBorderColor;
+                    color: $buttonDisableTextColor;
+                    cursor: default;
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
