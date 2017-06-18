@@ -1,26 +1,12 @@
 <div class="c-list-data__row row row--no-margin center-xs middle-xs">
     <div class="col-xs-12">
         <button class="c-button">New Recipe</button>
+        <app-recipe-item *ngFor="let recipeEl of recipes" [recipe]="recipeEl" (recipeSelected)="onRecipeSelected(recipeEl)">
+        </app-recipe-item>
     </div>
 </div>
 <div class="row row--no-margin center-xs middle-xs">
     <div class="col-xs-12">
-        <a href="#" class="" *ngFor="let recipe of recipes">
-            <div class="row recipe-single-listed">
-                <div class="col-xs-8">
-                    <h4 class="c-heading--medium">{{ recipe.name }}</h4>
-                    <p>{{ recipe.description }}</p>
-                </div>
-                <div class="col-xs-4">
-                    <span class="">
-                        <img [src]="recipe.imageRecipePath"
-                        alt="{{ recipe.name }}"
-                        style="max-height: 70px;">
-                    </span>
-                </div>
-            </div>
-        </a>
 
-        <app-recipe-item></app-recipe-item>
     </div>
 </div>

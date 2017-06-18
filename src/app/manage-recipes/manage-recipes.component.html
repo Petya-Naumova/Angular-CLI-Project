@@ -1,6 +1,6 @@
 <div class="c-list-data__row row row--no-margin first-xs">
     <div class="col-xs-10">
-        <app-edit></app-edit>
+        <app-edit (ingredientAdded)="onIngredientAdded($event)"></app-edit>
         <ul class="list-group">
             <a class="list-group-item" *ngFor="let ingredient of ingredients">
             {{ ingredient.name }} ({{ ingredient.amount }})</a>
