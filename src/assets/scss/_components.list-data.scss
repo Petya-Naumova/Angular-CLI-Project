@@ -16,8 +16,8 @@
 
     &__header,
     &__row {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
         position: relative;
     }
 
@@ -32,6 +32,7 @@
         line-height: 2.4rem;
         padding-top: 5rem;
         padding-bottom: 2.5rem;
+        border-radius: 5px;
 
         &:last-child {
             border-bottom: 1px solid $tableBorder;

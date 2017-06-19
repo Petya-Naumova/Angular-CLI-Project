@@ -10,8 +10,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RecipesComponent } from './recipes/recipes.component';
-import { ManageRecipesComponent } from './manage-recipes/manage-recipes.component';
-import { EditComponent } from './manage-recipes/edit/edit.component';
+import { IngredientsComponent } from './ingredients/ingredients.component';
+import { EditComponent } from './ingredients/edit/edit.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
@@ -27,7 +27,7 @@ import { DropDownDirective } from './shared/dropdown.directive';
     HeaderComponent,
     EditComponent,
     RecipesComponent,
-    ManageRecipesComponent,
+    IngredientsComponent,
     HideOnScrollDirective,
     DropDownDirective,
     RecipeListComponent,

@@ -9,7 +9,6 @@ export class EditComponent implements OnInit {
     @ViewChild('nameInput') nameInputRef: ElementRef;
     @ViewChild('amountInput') amountInputRef: ElementRef;
     @Output() ingredientAdded = new EventEmitter<Ingredient>();
-    
     constructor() {
 
     }

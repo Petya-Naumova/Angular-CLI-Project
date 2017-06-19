@@ -3,11 +3,11 @@ import { Ingredient } from '../shared/ingredient.model';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-manage-recipes',
-  templateUrl: './manage-recipes.component.html'
+  selector: 'app-ingredients',
+  templateUrl: './ingredients.component.html'
 })
 
-export class ManageRecipesComponent implements OnInit{
+export class IngredientsComponent implements OnInit {
   ingredients: Ingredient[] = [
     new Ingredient('Apples', 5),
     new Ingredient('Tomatoes', 10)
@@ -17,11 +17,11 @@ export class ManageRecipesComponent implements OnInit{
 
   }
 
-  ngOnInit(){
+  ngOnInit() {
 
   }
 
-  onIngredientAdded(ingredient: Ingredient){
+  onIngredientAdded(ingredient: Ingredient) {
     this.ingredients.push(ingredient);
   }
 }

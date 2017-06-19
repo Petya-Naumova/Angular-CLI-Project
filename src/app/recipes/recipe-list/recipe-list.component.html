@@ -1,6 +1,10 @@
 <div class="c-list-data__row row row--no-margin center-xs middle-xs">
     <div class="col-xs-12">
-        <button class="c-button">New Recipe</button>
+        <div class="row">
+            <div class="col-xs-4 new-recipe-button">
+                <button class="c-button">New Recipe</button>
+            </div>
+        </div>
         <app-recipe-item *ngFor="let recipeEl of recipes" [recipe]="recipeEl" (recipeSelected)="onRecipeSelected(recipeEl)">
         </app-recipe-item>
     </div>
