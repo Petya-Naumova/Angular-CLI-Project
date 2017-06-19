@@ -1,9 +1,15 @@
 <div class="c-list-data__row row row--no-margin first-xs">
     <div class="col-xs-10">
         <app-edit (ingredientAdded)="onIngredientAdded($event)"></app-edit>
+        <div class="col-xs-5">
         <ul class="list-group">
-            <a class="list-group-item" *ngFor="let ingredient of ingredients">
-            {{ ingredient.name }} ({{ ingredient.amount }})</a>
+            <li>
+                <a class="list-group-item" *ngFor="let ingredient of ingredients">
+                {{ ingredient.name }} ({{ ingredient.amount }})</a>
+            </li>
         </ul>
+        </div>
+
     </div>
 </div>
+<app-footer></app-footer>

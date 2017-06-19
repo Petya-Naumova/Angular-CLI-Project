@@ -27,12 +27,12 @@ import { DropDownDirective } from './shared/dropdown.directive';
     HeaderComponent,
     EditComponent,
     RecipesComponent,
-    ManageRecipesComponent, 
+    ManageRecipesComponent,
     HideOnScrollDirective,
     DropDownDirective,
-    RecipeListComponent, 
-    RecipeDetailComponent, 
-    RecipeItemComponent, 
+    RecipeListComponent,
+    RecipeDetailComponent,
+    RecipeItemComponent,
     FooterComponent
   ],
   imports: [

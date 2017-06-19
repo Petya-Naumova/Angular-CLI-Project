@@ -1,5 +1,4 @@
 export class Recipe {
-    
     public name: string;
     public description: string;
     public imageRecipePath: string;

@@ -37,23 +37,23 @@
                 }
                 &--add {
                     @extend .c-button;
-                    min-width: 10rem;
+                    min-width: 9rem;
                     &:after {
-                        background: linear-gradient(to bottom, #2ecc71, #2ecc71);
+                        background: linear-gradient(to right, #2ecc71, #27ae60);
                     }
                 }
                 &--delete {
                     @extend .c-button;
-                    min-width: 10rem;
+                    min-width: 9rem;
                     &:after {
-                        background: linear-gradient(to bottom, #c0392b, #c0392b);
+                        background: linear-gradient(to right, #e74c3c, #c0392b);
                     }
                 }
                 &--clear {
                     @extend .c-button;
-                    min-width: 10rem;
+                    min-width: 9rem;
                     &:after {
-                        background: linear-gradient(to bottom, #95a5a6, #95a5a6);
+                        background: linear-gradient(to bottom, #95a5a6, #7f8c8d);
                     }
                 }
                 &[disabled] {
