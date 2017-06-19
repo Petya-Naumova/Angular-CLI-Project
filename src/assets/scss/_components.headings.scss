@@ -1,19 +1,25 @@
 .c-heading {
     font-family: 'Pangolin', cursive;
     font-size: $fontSizeHeading;
+
     &--big {
-        font-size: $fontSizeHuge;
+        @extend .c-heading;
+        font-size: $fontSizeBig;
     }
     &--medium {
+        @extend .c-heading;
         font-size: $fontSizeTitle;
     }
     &--small {
+        @extend .c-heading;
         font-size: $fontSizeMedium;
     }
     &--heading {
+        @extend .c-heading;
         font-size: $fontSizeHeading;
     }
     &--info {
+        @extend .c-heading;
         color: $primaryInfoTextColor;
     }
 }

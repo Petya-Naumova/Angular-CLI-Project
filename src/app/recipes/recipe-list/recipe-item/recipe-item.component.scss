@@ -1,0 +1,15 @@
+.recipe-single-listed {
+    border: 1px solid $tableBorder;
+    border-radius: 5px;
+    border-bottom: none;
+    line-height: 2.4rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    cursor: pointer;
+}
+.recipe-single-listed:hover {
+    background-color: $primaryOddRowBackgroundColor;
+}
+.new-recipe-button {
+    padding-bottom: 5rem;
+}

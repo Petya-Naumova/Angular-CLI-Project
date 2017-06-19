@@ -1,14 +1,15 @@
 <div class="c-list-data__row row row--no-margin center-xs">
     <div class="col-xs-12">
-        <img [src]="recipe.imageRecipePath" alt="{{ recipe.name }}" style="height: auto; width: 640px; max-width:100%;">
+        <img [src]="recipe.imageRecipePath" alt="{{ recipe.name }}"
+        style="height: auto; width: 640px; max-width:100%; border-radius: 5px; cursor: pointer">
     </div>
 </div>
-<div class="row">
+<div class="row recipe-details-row">
     <div class="col-xs-12">
-        <h1>{{ recipe.name }}</h1>
+        <h1 class="c-heading--heading">{{ recipe.name }}</h1>
     </div>
 </div>
-<div class="row">
+<div class="row recipe-details-row">
     <div class="col-xs-12 dropdown" appDropDown>
         <button class="c-button">
             Manage recipes
@@ -16,25 +17,25 @@
         </button>
         <ul class="dropdown-menu">
             <li>
-                <a href="#">
+                <a href="">
                     Edit Recipe
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="">
                     Delete Recipe
                 </a>
             </li>
         </ul>
     </div>
 </div>
-<div class="row">
+<div class="row recipe-details-row">
     <div class="col-xs-12">
         {{ recipe.description }}
     </div>
 </div>
-<div class="row">
+<div class="row recipe-details-row">
     <div class="col-xs-12">
-        Ingredients
+        <h4 class="c-heading--medium">Ingredients</h4>
     </div>
 </div>
