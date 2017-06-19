@@ -1,8 +1,13 @@
+.ingredient-container {
+    flex-basis: 65.667%;
+    max-width: 65.667%;
+}
 .list-group {
     display: flex;
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
+    padding-top: 3rem;
     &-item {
         position: relative;
         display: flex;
@@ -12,5 +17,6 @@
         margin-bottom: -1px;
         background-color: #fff;
         border: 1px solid rgba(0, 0, 0, .125);
+        border-radius: 5px;
     }
 }

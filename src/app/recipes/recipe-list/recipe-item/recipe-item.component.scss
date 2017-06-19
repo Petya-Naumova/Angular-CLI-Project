@@ -1,11 +1,11 @@
 .recipe-single-listed {
-    border: 1px solid $tableBorder;
+    border: 1px solid #E9E9E9;
     border-radius: 5px;
-    border-bottom: none;
     line-height: 2.4rem;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
     cursor: pointer;
+    margin-bottom: 2rem;
 }
 .recipe-single-listed:hover {
     background-color: $primaryOddRowBackgroundColor;

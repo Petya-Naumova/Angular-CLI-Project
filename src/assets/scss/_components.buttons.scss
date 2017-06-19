@@ -38,13 +38,15 @@
                 &--add {
                     @extend .c-button;
                     min-width: 9rem;
+                    margin-right: 1rem;
                     &:after {
                         background: linear-gradient(to right, #2ecc71, #27ae60);
                     }
                 }
                 &--delete {
                     @extend .c-button;
-                    min-width: 9rem;
+                    min-width: 8rem;
+                    margin-right: 1rem;
                     &:after {
                         background: linear-gradient(to right, #e74c3c, #c0392b);
                     }

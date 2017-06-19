@@ -1,5 +1,7 @@
 .dropdown {
     position: relative;
+    flex-basis: 37.667%;
+    max-width: 37.667%;
 }
 
 .open > .dropdown-menu {
@@ -27,4 +29,10 @@
 .recipe-details-row {
     padding-top: 2rem;
     padding-bottom: 1rem;
+    padding-left: 1rem;
+
+    &--name {
+        padding-top: 4rem;
+        padding-left: 1rem;
+    }
 }
