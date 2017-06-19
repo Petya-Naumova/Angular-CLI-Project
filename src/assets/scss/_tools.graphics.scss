@@ -7,6 +7,15 @@
     position: relative;
     width: 200px;
 }
+.svg-icon {
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 24px;
+}
 
 .svg--salad {
     background-image: url('#{$imagesPath}/salad.svg');
@@ -43,4 +52,9 @@
     height: 10rem;
     width: 7rem;
     margin-left: 2rem;
+}
+
+.svg--caret-down {
+    background-image: url('#{$imagesPath}/caret-down.svg');
+    vertical-align: middle;
 }

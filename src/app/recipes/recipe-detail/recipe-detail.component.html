@@ -1,6 +1,6 @@
 <div class="c-list-data__row row row--no-margin center-xs">
     <div class="col-xs-12">
-        <img [src]="recipe.imageRecipePath" alt="{{ recipe.name }}" style="max-height: 300px;">
+        <img [src]="recipe.imageRecipePath" alt="{{ recipe.name }}" style="height: auto; width: 640px; max-width:100%;">
     </div>
 </div>
 <div class="row">
@@ -9,11 +9,22 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-xs-12 appDropDown">
-        <button class="c-button">Manage recipes</button>
-        <ul>
-            <li>Edit Recipe</li>
-            <li>Delete Recipe</li>
+    <div class="col-xs-12 dropdown" appDropDown>
+        <button class="c-button">
+            Manage recipes
+            <span class="svg-icon svg--caret-down"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="#">
+                    Edit Recipe
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Delete Recipe
+                </a>
+            </li>
         </ul>
     </div>
 </div>
