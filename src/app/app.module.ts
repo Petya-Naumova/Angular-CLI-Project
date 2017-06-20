@@ -9,31 +9,32 @@ import { LocalStorageModule } from 'angular-2-local-storage';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+
 import { RecipesComponent } from './recipes/recipes.component';
-import { IngredientsComponent } from './ingredients/ingredients.component';
-import { EditComponent } from './ingredients/edit/edit.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 
+import { IngredientsComponent } from './ingredients/ingredients.component';
+import { EditComponent } from './ingredients/edit/edit.component';
+
 import { HideOnScrollDirective } from './shared/hide-on-scroll.directive';
 import { DropDownDirective } from './shared/dropdown.directive';
-
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    EditComponent,
+    FooterComponent,
     RecipesComponent,
-    IngredientsComponent,
-    HideOnScrollDirective,
-    DropDownDirective,
     RecipeListComponent,
     RecipeDetailComponent,
     RecipeItemComponent,
-    FooterComponent
+    IngredientsComponent,
+    EditComponent,
+    HideOnScrollDirective,
+    DropDownDirective
   ],
   imports: [
     BrowserModule,

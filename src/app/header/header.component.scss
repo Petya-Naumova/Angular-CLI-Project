@@ -1,10 +1,13 @@
 .header {
-    //position: fixed;
+    position: fixed;
     width: 100%;
     height: $header-height;
     left: 0;
+    top: 0;
     box-shadow: 0 0 7px $boxShadowColor;
     transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+    background-color: #252830;
+    z-index: 2;
     &__logo {
         background-image: url('#{$imagesPath}/board.svg');
         background-repeat: no-repeat;
@@ -27,7 +30,8 @@
             margin: 2rem;
             cursor: pointer;
             color: $labelTextColor;
-            &--link, .active {
+            &--link,
+            .active {
                 display: inline-block;
                 text-decoration: none;
                 font-family: $fontPangolinRegular;
@@ -65,7 +69,9 @@
         }
     }
 }
-.active:before, .active:after {
+
+.active:before,
+.active:after {
     position: absolute;
     left: 0px;
     width: 100%;
@@ -75,4 +81,8 @@
     transition: all 0.3s;
     opacity: 1!important;
     transform: translateY(0px)!important;
+}
+
+.fixed {
+    transform: translateY(100%);
 }

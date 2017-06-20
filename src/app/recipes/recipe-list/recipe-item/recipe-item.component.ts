@@ -6,7 +6,7 @@ import { Recipe } from '../../recipe.model';
   templateUrl: './recipe-item.component.html'
 })
 export class RecipeItemComponent implements OnInit {
-  showStyle = false;
+  // showStyle = false;
   @Input() recipe: Recipe;
   @Output() recipeSelected = new EventEmitter<void>();
   constructor() { }
@@ -18,13 +18,12 @@ export class RecipeItemComponent implements OnInit {
     this.recipeSelected.emit();
   }
 
-  getBackgroundColor() {
-    console.log(this);
-    if (this.showStyle) {
-      return '#fafafa';
-    } else {
-      return '';
-    }
-  }
+  // getBackgroundColor() {
+  //   if (this.showStyle) {
+  //     return '#fafafa';
+  //   } else {
+  //     return '';
+  //   }
+  // }
 
 }

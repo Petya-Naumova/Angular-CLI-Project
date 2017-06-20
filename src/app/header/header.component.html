@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" [class.fixed]="navIsFixed">
     <nav role="navigation" class="main-nav column center-xs middle-xs">
         <div class="col-xs-3 header__logo-container">
             <a routerLink="/" class="header__logo"></a>
@@ -15,6 +15,5 @@
             </div>
         </div>
     </nav>
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
+    <!--<router-outlet></router-outlet>-->
 </header>
