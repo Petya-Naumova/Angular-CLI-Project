@@ -1,14 +1,16 @@
 <a (click)="onSelected()">
-    <div class="row recipe-single-listed">
+    <div class="row recipe-single-listed" [style.background-color]="getBackgroundColor()"
+    (click)="showStyle = !showStyle">
         <div class="col-xs-8">
             <h4 class="c-heading--medium">{{ recipe.name }}</h4>
             <p>{{ recipe.description }}</p>
         </div>
         <div class="col-xs-4">
             <span>
-                <img [src]="recipe.imageRecipePath"
+                <img class="recipe-single-listed__image"
+                [src]="recipe.imageRecipePath"
                 alt="{{ recipe.name }}"
-                style="height: auto; width: 230px; max-width:100%; border-radius: 3px;">
+                title="{{ recipe.name }}">
             </span>
         </div>
     </div>

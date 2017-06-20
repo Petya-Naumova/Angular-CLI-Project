@@ -19,12 +19,19 @@
     padding: 1rem;
     margin: 2px 0 0;
     list-style: none;
-    background-color: #fff;
+    background-color: $gradientEndColor;
     background-clip: padding-box;
-    border: 1px solid #ccc;
+    border: 1px solid $inputBorderColor;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
+}
+.recipe-details-image {
+    height: auto; 
+    width: 640px; 
+    max-width:100%; 
+    border-radius: 5px; 
+    cursor: pointer;
 }
 .recipe-details-row {
     padding-top: 2rem;

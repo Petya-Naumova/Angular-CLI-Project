@@ -32,12 +32,9 @@
         h6 {
             font-size: 12px;
         }
-
-        p {
-            // margin: 0 0 10px
-        }
         
         pre {
+
             display: block;
             padding: 9.5px;
             margin: 0 0 10px;
@@ -50,6 +47,7 @@
             border: 1px solid #ccc;
             border-radius: 4px
         }
+
         blockquote {
             padding: 10px 20px;
             margin: 0 0 20px;
@@ -62,7 +60,7 @@
         }
 
         b, strong {
-            font-weight: 700
+            font-weight: 700;
         }
 
         ol {
@@ -73,10 +71,12 @@
             -webkit-margin-start: 0px;
             -webkit-margin-end: 0px;
             -webkit-padding-start: 40px;
+
             li {
                 display: list-item;
                 text-align: -webkit-match-parent;
             }
+
         }
 
         ul {
@@ -87,9 +87,11 @@
             -webkit-margin-start: 0px;
             -webkit-margin-end: 0px;
             -webkit-padding-start: 40px;
-            li{
+
+            li {
                 display: list-item;
                 text-align: -webkit-match-parent;
             }
+
         }
 }

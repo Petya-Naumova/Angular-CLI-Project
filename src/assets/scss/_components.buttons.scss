@@ -20,14 +20,14 @@
                 transform: translate3d(0, 0, 0);
                 &:after {
                     content: '';
-                    background: linear-gradient(to right, $gradientAddStartColor 60%, $gradientAddEndColor 100%);
+                    background: linear-gradient(to right, $primaryButtonGradientStartColor 50%, $primaryButtonGradientEndColor 100%);
                     height: $button-height;
                     display: inline-block;
                     left: 0;
                     position: absolute;
                     top: 0;
                     transform: translateX(-50%);
-                    transition: transform .5s ease;
+                    transition: transform .4s ease;
                     width: 200%;
                     z-index: -1;
                 }
@@ -40,7 +40,7 @@
                     min-width: 9rem;
                     margin-right: 1rem;
                     &:after {
-                        background: linear-gradient(to right, #2ecc71, #27ae60);
+                        background: linear-gradient(to right, $addButtonGradientStartColor 50%, $addButtonGradientEndColor 100%);
                     }
                 }
                 &--delete {
@@ -48,14 +48,14 @@
                     min-width: 8rem;
                     margin-right: 1rem;
                     &:after {
-                        background: linear-gradient(to right, #e74c3c, #c0392b);
+                        background: linear-gradient(to right, $deleteButtonGradientStartColor 50%, $deleteButtonGradientEndColor 100%);
                     }
                 }
                 &--clear {
                     @extend .c-button;
                     min-width: 9rem;
                     &:after {
-                        background: linear-gradient(to bottom, #95a5a6, #7f8c8d);
+                        background: linear-gradient(to right, $clearButtonGradientStartColor 50%, $clearButtonGradientEndColor 100%);
                     }
                 }
                 &[disabled] {

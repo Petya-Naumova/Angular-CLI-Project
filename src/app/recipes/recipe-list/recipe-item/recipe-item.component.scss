@@ -1,11 +1,18 @@
 .recipe-single-listed {
-    border: 1px solid #E9E9E9;
+    border: 1px solid $listBorder;
     border-radius: 5px;
     line-height: 2.4rem;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
     cursor: pointer;
     margin-bottom: 2rem;
+
+    &__image {
+        height: auto; 
+        width: 230px; 
+        max-width:100%; 
+        border-radius: 3px;
+    }
 }
 .recipe-single-listed:hover {
     background-color: $primaryOddRowBackgroundColor;

@@ -1,9 +1,10 @@
 .o-footer {
     background-color: $secondaryOddRowBackgroundColor;
     border-top: 1px solid $primaryBorderColor;
-    flex: none;
+    //flex: none;
     padding-bottom: 6rem;
     padding-top: 2rem;
+
     &__info {
         padding-bottom: 5rem;
         text-align: center;
@@ -11,7 +12,9 @@
             color: $errorColor;
         }
     }
+    
     .cr {
         align-self: flex-end;
     }
+
 }

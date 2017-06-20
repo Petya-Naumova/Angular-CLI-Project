@@ -27,14 +27,14 @@
     }
 
     &__row {
-        border: 1px solid $tableBorder;
+        border: 1px solid $listBorder;
         line-height: 2.4rem;
         padding-top: 5rem;
         padding-bottom: 5rem;
         border-radius: 5px;
 
         &:last-child {
-            border-bottom: 1px solid $tableBorder;
+            border-bottom: 1px solid $listBorder;
         }
 
         &--with-hover:hover,
@@ -53,7 +53,7 @@
         }
 
         &__label {
-            color: $tableLabelColor;
+            color: $inputTextColor;
             font-size: $fontSizeSmall;
             font-family: $fontItalic;
             line-height: 1.8rem;

@@ -1,12 +1,14 @@
 <div class="c-list-data__row row row--no-margin center-xs">
     <div class="col-xs-12">
-        <img [src]="recipe.imageRecipePath" alt="{{ recipe.name }}"
-        style="height: auto; width: 640px; max-width:100%; border-radius: 5px; cursor: pointer">
+        <img class="recipe-details-image"
+        [src]="recipe.imageRecipePath" 
+        alt="{{ recipe.name }}"
+        title="{{ recipe.name }}">
     </div>
 </div>
 <div class="row recipe-details-row--name">
     <div class="col-xs-12">
-        <h1 class="c-heading--heading">{{ recipe.name }}</h1>
+        <h1 title="{{ recipe.name }}" class="c-heading--heading">{{ recipe.name }}</h1>
     </div>
 </div>
 <div class="row recipe-details-row">
