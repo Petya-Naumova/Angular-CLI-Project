@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 
 @Component({
-  moduleId: module.id,
+  // moduleId: module.id,
   selector: 'app-ingredients',
   templateUrl: './ingredients.component.html'
 })
