@@ -21,11 +21,12 @@ export class HeaderComponent implements OnInit {
 
     onWindowScroll() {
         console.log(123);
-        let number = this.document.body.scrollTop;
+        const number = this.document.body.scrollTop;
         if (number > 100) {
+          console.log(number);
             this.navIsFixed = true;
-        }
-        else if(this.navIsFixed && number < 10) {
+        } else if (this.navIsFixed && number < 10) {
+            console.log('number is < 10', number);
             this.navIsFixed = false;
         }
     }

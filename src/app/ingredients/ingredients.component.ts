@@ -13,9 +13,7 @@ export class IngredientsComponent implements OnInit {
     new Ingredient('Tomatoes', 10)
   ];
 
-  constructor() {
-
-  }
+  constructor() {}
 
   ngOnInit() {
 

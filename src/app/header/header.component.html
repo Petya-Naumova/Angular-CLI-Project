@@ -8,12 +8,11 @@
                 <h2 class="c-heading--big">Recipe Book</h2>
             </div>
             <div class="main-nav__list-item">
-                <a class="main-nav__list-item--link" routerLink="/recipes" routerLinkActive="active">Recipes</a>
+                <a class="main-nav__list-item--link" [routerLink]="['/recipes']" routerLinkActive="active">Recipes</a>
             </div>
-            <div class="main-nav__list-item">
-                <a class="main-nav__list-item--link" routerLink="/ingredients" routerLinkActive="active">Ingredients</a>
+            <div class="main-nav__list-item ">
+                <a class="main-nav__list-item--link " [routerLink]="['/ingredients']" routerLinkActive="active">Ingredients</a>
             </div>
         </div>
     </nav>
-    <!--<router-outlet></router-outlet>-->
 </header>

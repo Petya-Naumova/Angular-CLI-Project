@@ -1,7 +1,7 @@
 // Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
+import { routing } from './app.routing';
 import { FormsModule } from '@angular/forms';
 import { LocalStorageModule } from 'angular-2-local-storage';
 
@@ -18,7 +18,6 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { EditComponent } from './ingredients/edit/edit.component';
 
-import { HideOnScrollDirective } from './shared/hide-on-scroll.directive';
 import { DropDownDirective } from './shared/dropdown.directive';
 
 
@@ -33,13 +32,12 @@ import { DropDownDirective } from './shared/dropdown.directive';
     RecipeItemComponent,
     IngredientsComponent,
     EditComponent,
-    HideOnScrollDirective,
     DropDownDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
+    routing,
     LocalStorageModule.withConfig({
             prefix: 'my-dream-app',
             storageType: 'localStorage'
