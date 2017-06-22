@@ -2,8 +2,8 @@
     background-color: $secondaryOddRowBackgroundColor;
     border-top: 1px solid $primaryBorderColor;
     //flex: none;
-    padding-bottom: 6rem;
-    padding-top: 2rem;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
 
     &__info {
         padding-bottom: 5rem;
@@ -12,7 +12,7 @@
             color: $errorColor;
         }
     }
-    
+
     .cr {
         align-self: flex-end;
     }
