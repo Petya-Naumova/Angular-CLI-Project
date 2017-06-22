@@ -8,7 +8,7 @@
     transition: transform 0.7s .1s ease;
     backface-visibility: hidden;
     background-color: #252830;
-    z-index: 2;
+    z-index: 2000;
     &__logo {
         background-image: url('#{$imagesPath}/board.svg');
         background-repeat: no-repeat;
