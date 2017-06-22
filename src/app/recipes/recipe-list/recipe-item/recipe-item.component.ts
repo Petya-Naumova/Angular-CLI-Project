@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ElementRef } from '@angular/core';
 
 import { Recipe } from '../../recipe.model';
 @Component({
@@ -6,24 +6,18 @@ import { Recipe } from '../../recipe.model';
   templateUrl: './recipe-item.component.html'
 })
 export class RecipeItemComponent implements OnInit {
-  // showStyle = false;
+
   @Input() recipe: Recipe;
   @Output() recipeSelected = new EventEmitter<void>();
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
   }
 
   onSelected() {
-    this.recipeSelected.emit();
+      this.recipeSelected.emit();
   }
-
-  // getBackgroundColor() {
-  //   if (this.showStyle) {
-  //     return '#fafafa';
-  //   } else {
-  //     return '';
-  //   }
-  // }
 
 }

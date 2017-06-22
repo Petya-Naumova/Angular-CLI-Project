@@ -6,17 +6,22 @@
     padding-bottom: 2.5rem;
     cursor: pointer;
     margin-bottom: 2rem;
-
     &__image {
-        height: auto; 
-        width: 230px; 
-        max-width:100%; 
+        height: auto;
+        width: 230px;
+        max-width: 100%;
         border-radius: 3px;
     }
 }
+
 .recipe-single-listed:hover {
-    background-color: $primaryOddRowBackgroundColor;
+    //background-color: $primaryOddRowBackgroundColor;
 }
+
 .new-recipe-button {
     padding-bottom: 5rem;
 }
+.clicked {
+background-color:#fafafa;
+}
+

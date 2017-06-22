@@ -43,6 +43,9 @@
                 padding: 1.6rem 1rem;
                 font-size: $fontSizeTitle;
             }
+            &--text-logo {
+                color: $gradientEndColor;
+            }
             &--link:before,
             &--link:after {
                 position: absolute;
@@ -84,7 +87,7 @@
     transform: translateY(0px)!important;
 }
 
-.fixed {
+.scrolled {
     transform: translate(0, -100%);
     backface-visibility: hidden;
 }

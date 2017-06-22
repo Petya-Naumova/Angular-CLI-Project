@@ -8,7 +8,7 @@ import { DOCUMENT } from '@angular/platform-browser';
 
 export class HeaderComponent implements OnInit {
 
-    public navIsFixed = false;
+    public isScrolled = false;
 
     constructor(@Inject(DOCUMENT) private document: any) {
 
@@ -20,14 +20,14 @@ export class HeaderComponent implements OnInit {
     @HostListener('window:scroll', [])
 
     onWindowScroll() {
-        console.log(123);
+
         const number = this.document.body.scrollTop;
         if (number > 150) {
-          console.log(number);
-            this.navIsFixed = true;
-        } else if (this.navIsFixed && number < 150) {
-            console.log('number is < 10', number);
-            this.navIsFixed = false;
+
+            this.isScrolled = true;
+        } else if (this.isScrolled && number < 150) {
+
+            this.isScrolled = false;
         }
     }
 

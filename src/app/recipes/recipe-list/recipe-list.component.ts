@@ -10,19 +10,19 @@ export class RecipeListComponent implements OnInit {
   @Output() recipeWasSelected = new EventEmitter<Recipe>();
   recipes: Recipe [] = [
     new Recipe('Lemon Cake', 'Cupcake ipsum dolor sit amet jelly apple pie sesame snaps biscuit.',
-    '/../../assets/images/lemon-cake.jpg'),
+    '/../../assets/images/lemon-cake.jpg', '#fafafa'),
     new Recipe('Pancakes', 'Try these marvelous pancakes, very easy to make',
-    '/../../assets/images/pancakes.jpg'),
+    '/../../assets/images/pancakes.jpg', '#fafafa'),
     new Recipe('Sandwiches', 'Sweet roll soufflé cookie marshmallow cake oat cake toffee bonbon.',
-    '/../../assets/images/sandwiches.jpg'),
+    '/../../assets/images/sandwiches.jpg', '#fafafa'),
     new Recipe('Cake', 'This is how you can make very tasty cake only with...',
-    '/../../assets/images/cake.jpg'),
+    '/../../assets/images/cake.jpg', '#fafafa'),
     new Recipe('Pizza', 'Candy donut pudding. Cotton candy jujubes oat cake tiramisu powder dessert.',
-    '/../../assets/images/pizza.jpg'),
+    '/../../assets/images/pizza.jpg', '#fafafa'),
     new Recipe('Chocolate Cake', 'Chocolate Cake',
-    '/../../assets/images/chocolate-cake.jpg'),
+    '/../../assets/images/chocolate-cake.jpg', '#fafafa'),
     new Recipe('Cheesecake', 'Cheesecake',
-    '/../../assets/images/cheesecake.jpg')
+    '/../../assets/images/cheesecake.jpg', '#fafafa')
 
   ];
   constructor() { }
@@ -31,7 +31,6 @@ export class RecipeListComponent implements OnInit {
   }
 
   onRecipeSelected(recipe: Recipe) {
-    console.log(this);
     this.recipeWasSelected.emit(recipe);
   }
 }
