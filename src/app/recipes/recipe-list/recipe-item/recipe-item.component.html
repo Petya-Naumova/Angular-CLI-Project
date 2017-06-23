@@ -1,4 +1,4 @@
-<a (click)="onSelected()">
+<a (click)="onSelected(selectedItem.value)" #selectedItem>
     <div class="row recipe-single-listed">
         <div class="col-xs-8">
             <h4 class="c-heading--medium">{{ recipe.name }}</h4>

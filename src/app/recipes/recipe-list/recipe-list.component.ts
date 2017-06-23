@@ -1,13 +1,15 @@
-import { Component, OnInit, EventEmitter, Output} from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Recipe } from '../recipe.model';
 
 @Component({
   selector: 'app-recipe-list',
-  templateUrl: './recipe-list.component.html'
+  templateUrl: './recipe-list.component.html',
 })
 export class RecipeListComponent implements OnInit {
 
+  @Output() childChanged = new EventEmitter<string>();
   @Output() recipeWasSelected = new EventEmitter<Recipe>();
+
   recipes: Recipe [] = [
     new Recipe('Lemon Cake', 'Cupcake ipsum dolor sit amet jelly apple pie sesame snaps biscuit.',
     '/../../assets/images/lemon-cake.jpg', '#fafafa'),
@@ -38,5 +40,8 @@ export class RecipeListComponent implements OnInit {
 
   onRecipeSelected(recipe: Recipe) {
     this.recipeWasSelected.emit(recipe);
+  }
+  onChange(value: string) {
+    this.childChanged.emit(value);
   }
 }
