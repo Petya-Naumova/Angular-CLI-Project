@@ -6,12 +6,9 @@
             </div>
         </div>
 
-<input type="text" #childInput (keyup)="onChange(childInput.value)">
+        <input type="text" #childInput (keyup)="onChange(childInput.value)">
 
-        <app-recipe-item *ngFor="let recipeEl of recipes"
-        [style.backgroundColor]="recipeEl.backgroundColor"
-        [recipe]="recipeEl"
-        (recipeSelected)="onRecipeSelected(recipeEl)">
+        <app-recipe-item *ngFor="let recipeEl of recipes" [style.backgroundColor]="recipeEl.backgroundColor" [recipe]="recipeEl">
         </app-recipe-item>
     </div>
 </div>
