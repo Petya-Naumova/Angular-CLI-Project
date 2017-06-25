@@ -20,6 +20,8 @@ import { EditComponent } from './ingredients/edit/edit.component';
 
 import { DropDownDirective } from './shared/dropdown.directive';
 
+import { IngredientsService } from './ingredients/ingredients.service';
+
 
 
 @NgModule({
@@ -44,7 +46,7 @@ import { DropDownDirective } from './shared/dropdown.directive';
             storageType: 'localStorage'
         })
   ],
-  providers: [],
+  providers: [IngredientsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

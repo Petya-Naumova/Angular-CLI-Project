@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
+import { IngredientsService } from './ingredients.service';
 
 @Component({
   // moduleId: module.id,
@@ -8,18 +9,17 @@ import { Ingredient } from '../shared/ingredient.model';
 })
 
 export class IngredientsComponent implements OnInit {
-  ingredients: Ingredient[] = [
-    new Ingredient('Apples', 5),
-    new Ingredient('Tomatoes', 10)
-  ];
+  ingredients: Ingredient[];
 
-  constructor() {}
+  constructor(private ingrService: IngredientsService) {}
 
   ngOnInit() {
-
-  }
-
-  onIngredientAdded(ingredient: Ingredient) {
-    this.ingredients.push(ingredient);
+    this.ingredients = this.ingrService.getIngredients();
+    this.ingrService.ingredientsChanged
+      .subscribe(
+        (ingredients: Ingredient[]) => {
+          this.ingredients = ingredients;
+        }
+      );
   }
 }
