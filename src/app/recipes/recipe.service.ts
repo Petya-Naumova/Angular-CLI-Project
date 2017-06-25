@@ -1,12 +1,14 @@
-import { EventEmitter } from '@angular/core';
+import { IngredientsService } from './../ingredients/ingredients.service';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Recipe } from './recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
 
+@Injectable()
 export class RecipeService {
-    recipeSelected =  new EventEmitter<Recipe>();  
+    recipeSelected =  new EventEmitter<Recipe>();
 
     private recipes: Recipe [] = [
-      new Recipe('Lemon Cake', 
+      new Recipe('Lemon Cake',
       'Cupcake ipsum dolor sit amet jelly apple pie sesame snaps biscuit.',
       '/../../assets/images/lemon-cake.jpg'
       , '#fafafa', [
@@ -16,9 +18,9 @@ export class RecipeService {
           new Ingredient('Sugar', 350),
           new Ingredient('Vanilla extract', 1)
       ]),
-      new Recipe('Pancakes', 
+      new Recipe('Pancakes',
       'Try these marvelous pancakes, very easy to make',
-      '/../../assets/images/pancakes.jpg', 
+      '/../../assets/images/pancakes.jpg',
       '#fafafa', [
           new Ingredient('Flour', 250),
           new Ingredient('Egg', 3),
@@ -81,7 +83,13 @@ export class RecipeService {
        ])
   ];
 
+  constructor(private ingrService: IngredientsService) {}
+
   getRecipes() {
       return this.recipes.slice();
+  }
+
+  addIngredientsToList(ingredients: Ingredient[]) {
+    this.ingrService.addIngredients(ingredients);
   }
 }
