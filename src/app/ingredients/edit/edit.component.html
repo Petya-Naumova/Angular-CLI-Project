@@ -1,19 +1,19 @@
 <div class="o-form-wrapper c-list-data__row row row--no-margin">
     <div class="col-xs-12">
-        <form>
+        <form (ngSubmit)="onAddItem(form)" #form="ngForm">
             <div class="row row--no-margin first-xs">
                 <div class="col-xs-5">
                     <label for="name">Name</label>
-                    <input type="text" #nameInput>
+                    <input type="text" name="name" ngModel>
                 </div>
                 <div class="col-xs-2">
                     <label for="amount">Amount</label>
-                    <input type="number" #amountInput>
+                    <input type="number" name="amount" ngModel>
                 </div>
             </div>
             <div class="row first-xs buttons-container">
                 <div class="col-xs-12" style="margin-left: 2rem;">
-                    <button class="c-button--add" type="submit" (click)="onAddItem()">Add</button>
+                    <button class="c-button--add" type="submit">Add</button>
                     <button class="c-button--delete" type="button">Delete</button>
                     <button class="c-button--clear" type="button">Clear</button>
                 </div>

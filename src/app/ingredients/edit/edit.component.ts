@@ -1,15 +1,13 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Ingredient } from '../../shared/ingredient.model';
 import { IngredientsService } from '../ingredients.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
     selector: 'app-edit',
     templateUrl: './edit.component.html'
 })
 export class EditComponent implements OnInit {
-    @ViewChild('nameInput') nameInputRef: ElementRef;
-    @ViewChild('amountInput') amountInputRef: ElementRef;
-
 
     constructor(private ingrService: IngredientsService) {
 
@@ -19,10 +17,10 @@ export class EditComponent implements OnInit {
 
     }
 
-    onAddItem() {
-        const ingName = this.nameInputRef.nativeElement.value;
-        const ingAmount = this.amountInputRef.nativeElement.value;
-        const newIngredient = new Ingredient(ingName, ingAmount);
+    onAddItem(form: NgForm) {
+        const value = form.value;
+
+        const newIngredient = new Ingredient(value.name, value.amount);
         this.ingrService.addIngredient(newIngredient);
     }
 }
