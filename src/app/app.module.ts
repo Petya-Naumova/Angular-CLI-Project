@@ -22,6 +22,7 @@ import { EditComponent } from './ingredients/edit/edit.component';
 
 import { DropDownDirective } from './shared/dropdown.directive';
 import { IngredientsService } from './ingredients/ingredients.service';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 
 
@@ -38,7 +39,8 @@ import { IngredientsService } from './ingredients/ingredients.service';
     IngredientsComponent,
     EditComponent,
     DropDownDirective,
-    RecipeStartComponent
+    RecipeStartComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,
