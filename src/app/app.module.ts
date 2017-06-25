@@ -1,7 +1,7 @@
+import { AppRoutingModule } from './app-routing.module';
 // Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { routing } from './app.routing';
 import { FormsModule } from '@angular/forms';
 import { LocalStorageModule } from 'angular-2-local-storage';
 
@@ -40,7 +40,7 @@ import { IngredientsService } from './ingredients/ingredients.service';
   imports: [
     BrowserModule,
     FormsModule,
-    routing,
+    AppRoutingModule,
     LocalStorageModule.withConfig({
             prefix: 'my-dream-app',
             storageType: 'localStorage'
