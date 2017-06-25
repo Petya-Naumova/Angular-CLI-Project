@@ -1,5 +1,6 @@
-import { AppRoutingModule } from './app-routing.module';
+
 // Modules
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -14,13 +15,14 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { EditComponent } from './ingredients/edit/edit.component';
 
 import { DropDownDirective } from './shared/dropdown.directive';
-
 import { IngredientsService } from './ingredients/ingredients.service';
+
 
 
 
@@ -35,7 +37,8 @@ import { IngredientsService } from './ingredients/ingredients.service';
     RecipeItemComponent,
     IngredientsComponent,
     EditComponent,
-    DropDownDirective
+    DropDownDirective,
+    RecipeStartComponent
   ],
   imports: [
     BrowserModule,

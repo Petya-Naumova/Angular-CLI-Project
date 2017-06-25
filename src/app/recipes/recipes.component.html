@@ -4,9 +4,6 @@
         <app-recipe-list (childChanged)="childValue = $event"></app-recipe-list>
     </div>
     <div class="col-xs-6">
-        <app-recipe-detail *ngIf="selectedRecipe; else infoText" [recipe]="selectedRecipe"></app-recipe-detail>
-        <ng-template #infoText>
-            <h3 class="c-heading--medium">Please, select a recipe!</h3>
-        </ng-template>
+        <router-outlet></router-outlet>
     </div>
 </div>
