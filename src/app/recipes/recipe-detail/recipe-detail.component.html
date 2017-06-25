@@ -36,5 +36,10 @@
 <div class="row recipe-details-row">
     <div class="col-xs-12">
         <h4 class="c-heading--medium">Ingredients</h4>
+        <ul class="">
+            <li *ngFor="let ingredient of recipe.ingredients">
+                {{ ingredient.name }} - {{ ingredient.amount }}
+            </li>
+        </ul>
     </div>
 </div>
