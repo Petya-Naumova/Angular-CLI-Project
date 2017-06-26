@@ -1,18 +1,17 @@
 <header class="header" [class.scrolled]="isScrolled">
-    <nav role="navigation" class="main-nav column center-xs middle-xs">
-        <div class="col-xs-3 header__logo-container">
+    <nav role="navigation" class="main-nav column center-xs middle-xs center-sm middle-sm">
+        <div class="header__logo-container">
             <a routerLink="/" class="header__logo"></a>
         </div>
-        <div class="col-xs-8 main-nav__container">
-            <div class="main-nav__list-item">
-                <h2 class="c-heading--big main-nav__list-item--text-logo" title="Recipe Book">Recipe Book</h2>
-            </div>
-            <div class="main-nav__list-item">
-                <a class="main-nav__list-item--link" routerLink="/recipes" routerLinkActive="active">Recipes</a>
-            </div>
-            <div class="main-nav__list-item ">
-                <a class="main-nav__list-item--link " routerLink="/ingredients" routerLinkActive="active">Ingredients</a>
-            </div>
+        <div class="row center-xs middle-xs center-sm middle-sm">
+          <div class="col-xs-12 col-sm-12 main-nav__container">
+              <div class="main-nav__list-item">
+                  <a class="main-nav__list-item--link" routerLink="/recipes" routerLinkActive="active">Recipes</a>
+              </div>
+              <div class="main-nav__list-item ">
+                  <a class="main-nav__list-item--link " routerLink="/ingredients" routerLinkActive="active">Ingredients</a>
+              </div>
+          </div>
         </div>
     </nav>
 </header>
