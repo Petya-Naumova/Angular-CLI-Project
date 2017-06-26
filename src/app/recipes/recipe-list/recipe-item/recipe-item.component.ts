@@ -5,7 +5,7 @@ import { Recipe } from '../../recipe.model';
   templateUrl: './recipe-item.component.html'
 })
 export class RecipeItemComponent implements OnInit {
-
+  private recipeItemActive = false;
   @Input() recipe: Recipe;
   @Input() index: number;
 

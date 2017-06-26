@@ -14,12 +14,10 @@
     }
 }
 
-.recipe-single-listed:hover {
-    background-color: $primaryOddRowBackgroundColor;
-}
-
 .new-recipe-button {
     padding-bottom: 5rem;
 }
-
+.recipe-active {
+  background-color: $selectedItemBackgroundColor;
+}
 

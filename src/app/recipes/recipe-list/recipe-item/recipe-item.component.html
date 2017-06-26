@@ -1,5 +1,5 @@
-<a [routerLink]="[index]" routerLinkActive="active">
-    <div class="row recipe-single-listed">
+<a>
+    <div class="row recipe-single-listed" [routerLink]="[index]" routerLinkActive="recipe-active">
         <div class="col-xs-8">
             <h4 class="c-heading--medium">{{ recipe.name }}</h4>
             <p>{{ recipe.description }}</p>

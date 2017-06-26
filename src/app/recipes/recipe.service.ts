@@ -10,7 +10,7 @@ export class RecipeService {
       new Recipe('Lemon Cake',
       'Cupcake ipsum dolor sit amet jelly apple pie sesame snaps biscuit.',
       '/../../assets/images/lemon-cake.jpg'
-      , '#fafafa', [
+      , '#ECECEC', [
           new Ingredient('Lemon', 2),
           new Ingredient('Flour', 250),
           new Ingredient('Egg', 4),
@@ -20,14 +20,14 @@ export class RecipeService {
       new Recipe('Pancakes',
       'Try these marvelous pancakes, very easy to make',
       '/../../assets/images/pancakes.jpg',
-      '#fafafa', [
+      '#ECECEC', [
           new Ingredient('Flour', 250),
           new Ingredient('Egg', 3),
           new Ingredient('Milk', 250)
       ]),
       new Recipe('Cake', 'This is how you can make very tasty cake only with...',
       '/../../assets/images/cake.jpg',
-      '#fafafa', [
+      '#ECECEC', [
           new Ingredient('Fruit', 2),
           new Ingredient('Flour', 250),
           new Ingredient('Egg', 5),
@@ -38,45 +38,45 @@ export class RecipeService {
       new Recipe('Tomato and Mozzarella',
        'Tomato and Mozzarella',
       '/../../assets/images/tomato-mozzarella.jpg',
-       '#fafafa', [
+       '#ECECEC', [
            new Ingredient('Mozzarella', 350),
            new Ingredient('Tomato', 2)
        ]),
       new Recipe('Salmon', 'Salmon',
       '/../../assets/images/salmon.jpg',
-        '#fafafa', [
+        '#ECECEC', [
             new Ingredient('Salmon', 350)
         ]),
       new Recipe('Sandwich',
       'Sandwich',
       '/../../assets/images/sandwich.jpg',
-       '#fafafa', [
+       '#ECECEC', [
            new Ingredient('Bread', 1)
        ]),
       new Recipe('Sandwiches',
        'Sweet roll soufflé cookie marshmallow cake oat cake toffee bonbon.',
       '/../../assets/images/sandwiches.jpg',
-       '#fafafa', [
+       '#ECECEC', [
            new Ingredient('Bread', 1),
            new Ingredient('Cheese', 150)
        ]),
       new Recipe('Pizza',
       'Candy donut pudding. Cotton candy jujubes oat cake tiramisu powder dessert.',
       '/../../assets/images/pizza.jpg',
-       '#fafafa', [
+       '#ECECEC', [
            new Ingredient('Mushrooms', 4),
            new Ingredient('Cheese', 150),
            new Ingredient('Tomato sauce', 1)
        ]),
       new Recipe('Chocolate Cake', 'Chocolate Cake',
       '/../../assets/images/chocolate-cake.jpg',
-       '#fafafa', [
+       '#ECECEC', [
            new Ingredient('Chocolate', 250),
            new Ingredient('Flour', 150)
        ]),
       new Recipe('Cheesecake', 'Cheesecake',
       '/../../assets/images/cheesecake.jpg',
-       '#fafafa', [
+       '#ECECEC', [
            new Ingredient('Biscuits', 250),
            new Ingredient('Cheese', 150)
        ])

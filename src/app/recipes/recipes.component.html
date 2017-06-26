@@ -1,7 +1,6 @@
 <div class="c-list-data__row row row--no-margin center-xs app-r">
     <div class="col-xs-6">
-        <p>Value came from Child Component {{ childValue }}</p>
-        <app-recipe-list (childChanged)="childValue = $event"></app-recipe-list>
+        <app-recipe-list></app-recipe-list>
     </div>
     <div class="col-xs-6">
         <router-outlet></router-outlet>
