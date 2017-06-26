@@ -6,12 +6,10 @@
             </div>
         </div>
         <app-recipe-item *ngFor="let recipeEl of recipes;
-        let i = index" [style.backgroundColor]="recipeEl.backgroundColor" [recipe]="recipeEl" [index]="i">
+        let i = index" [recipe]="recipeEl" [index]="i">
         </app-recipe-item>
     </div>
 </div>
 <div class="row row--no-margin center-xs middle-xs">
-    <div class="col-xs-12">
-
-    </div>
+    <div class="col-xs-12"></div>
 </div>

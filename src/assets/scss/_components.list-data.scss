@@ -10,47 +10,12 @@
 
     }
 
-    &__border-top {
-        border-top: 1px solid $primaryBorderColor;
-    }
-
-    &__header,
-    &__row {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-        position: relative;
-    }
-
-    &__header {
-        border: 1px solid transparent;
-        padding-bottom: 2rem;
-    }
-
     &__row {
         border: 1px solid $listBorder;
         line-height: 2.4rem;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding: 5rem 2.5rem 5rem;
         border-radius: 5px;
-
-        &:last-child {
-            border-bottom: 1px solid $listBorder;
-        }
-
-        &--with-hover:hover,
-        &--with-hover:focus {
-            box-shadow: 0 10px 15px -7px rgba(0,0,0,.1);
-            z-index: 1;
-        }
-
-        &:nth-child(2n) {
-            background-color: $secondaryOddRowBackgroundColor;
-        }
-
-        .c-button--icon {
-            margin-left: auto;
-            margin-right: auto;
-        }
+        position: relative;
 
         &__label {
             color: $inputTextColor;

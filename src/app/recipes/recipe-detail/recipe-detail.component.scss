@@ -27,6 +27,7 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     &--item:hover {
       font-weight: bolder;
+      cursor: pointer;
     }
 }
 .recipe-details-image {

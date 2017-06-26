@@ -27,7 +27,7 @@ input[type="number"] {
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.4;
-    color: $inputTextColor; 
+    color: $inputTextColor;
     background-color: $secondaryTextColor;
     background-image: none;
     border: 1px solid $inputBorderColor;
@@ -49,12 +49,4 @@ input[type="checkbox"] {
     opacity: 0;
     padding: 0;
     position: absolute;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0;
-    /* <-- Apparently some margin are still there even though it's hidden */
 }

@@ -1,9 +1,9 @@
 
 // Modules
-import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 import { LocalStorageModule } from 'angular-2-local-storage';
 
 // Components
@@ -23,9 +23,6 @@ import { EditComponent } from './ingredients/edit/edit.component';
 import { DropDownDirective } from './shared/dropdown.directive';
 import { IngredientsService } from './ingredients/ingredients.service';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
-
-
-
 
 @NgModule({
   declarations: [

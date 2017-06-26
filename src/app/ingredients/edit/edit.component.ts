@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
 import { Ingredient } from '../../shared/ingredient.model';
 import { IngredientsService } from '../ingredients.service';
-import { NgForm } from '@angular/forms';
+
 
 @Component({
     selector: 'app-edit',
@@ -9,13 +11,9 @@ import { NgForm } from '@angular/forms';
 })
 export class EditComponent implements OnInit {
 
-    constructor(private ingrService: IngredientsService) {
+    constructor(private ingrService: IngredientsService) { }
 
-    }
-
-    ngOnInit() {
-
-    }
+    ngOnInit() { }
 
     onAddItem(form: NgForm) {
         const value = form.value;

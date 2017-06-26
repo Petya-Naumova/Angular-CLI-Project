@@ -1,5 +1,5 @@
-import { IngredientsService } from './../ingredients/ingredients.service';
 import { Injectable } from '@angular/core';
+import { IngredientsService } from './../ingredients/ingredients.service';
 import { Recipe } from './recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
 

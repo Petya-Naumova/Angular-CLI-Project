@@ -5,7 +5,6 @@ import { IngredientsService } from './ingredients.service';
 
 
 @Component({
-  // moduleId: module.id,
   selector: 'app-ingredients',
   templateUrl: './ingredients.component.html'
 })
