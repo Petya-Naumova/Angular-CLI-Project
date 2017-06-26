@@ -24,16 +24,20 @@
     border: 1px solid $inputBorderColor;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    &--item:hover {
+      font-weight: bolder;
+    }
 }
 .recipe-details-image {
-    height: auto; 
-    width: 640px; 
-    max-width:100%; 
-    border-radius: 5px; 
+    height: auto;
+    width: 640px;
+    max-width:100%;
+    border-radius: 5px;
     cursor: pointer;
 }
 .recipe-details-row {
+    cursor:default;
     padding-top: 2rem;
     padding-bottom: 1rem;
     padding-left: 1rem;
@@ -41,6 +45,7 @@
     &--name {
         padding-top: 4rem;
         padding-left: 1rem;
+        cursor:default;
     }
 }
 
