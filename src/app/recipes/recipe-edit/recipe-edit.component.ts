@@ -19,12 +19,12 @@ export class RecipeEditComponent implements OnInit {
   post: any;
   description: '';
   name: '';
-  image: '';
+  imageRecipePath: '';
 
   constructor(private recipeService: RecipeService, private route: ActivatedRoute, private fb: FormBuilder) {
     this.rForm = fb.group({
       'name': [null, Validators.required],
-      'image': [null, Validators.required],
+      'imageRecipePath': [null, Validators.required],
       'description': [null, Validators.compose([Validators.required, Validators.maxLength(200)])],
     });
   }
@@ -32,13 +32,20 @@ export class RecipeEditComponent implements OnInit {
   editForm(post) {
     console.log(this.recipe);
     this.recipe.name = post.name;
-    this.recipe.imageRecipePath = post.image;
+    this.recipe.imageRecipePath = post.imageRecipePath;
     this.recipe.description = post.description;
     this.name = post.name;
     this.description = post.description;
-    this.image = post.image;
+    this.imageRecipePath = post.imageRecipePath;
   }
-
+  addForm(post) {
+      this.recipe.name = post.name;
+      this.recipe.imageRecipePath = post.imageRecipePath;
+      this.recipe.description = post.description;
+      this.name = post.name;
+      this.description = post.description;
+      this.imageRecipePath = post.imageRecipePath;
+  }
   ngOnInit() {
     this.route.params
       .subscribe(

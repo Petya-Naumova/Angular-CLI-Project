@@ -1,16 +1,16 @@
 <div *ngIf="!name; else formInfo">
   <form class="c-list-data__row row row--no-margin center-xs middle-xs"
-  [formGroup]="rForm" (ngSubmit)="editForm(rForm.value)">
+  [formGroup]="rForm" (ngSubmit)="editMode ? addForm(rForm.value) : editForm(rForm.value)">
         <div class="col-xs-12 form-col">
-          <h3 class="c-heading--medium">Edit recipe</h3>
+          <h3 class="c-heading--medium">{{ editMode ? 'Edit' : 'Add' }} recipe</h3>
         </div>
         <div class="col-xs-12 form-col">
           <label for="name">Name</label>
             <input type="text" formControlName="name">
         </div>
         <div class="col-xs-12 form-col">
-          <label for="image">Image</label>
-            <input type="text" formControlName="image">
+          <label for="imageRecipePath">Image</label>
+            <input type="text" formControlName="imageRecipePath">
         </div>
         <div class="col-xs-12 form-col">
           <label for="description">Description</label>
@@ -28,10 +28,10 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-          <h3 class="c-heading--medium">The recipe has been successfully edited!</h3>
-          <h1>{{ recipe.name }}</h1>
-          <img class="" [src]="recipe.imageRecipePath" alt="{{ recipe.imageRecipePath }}" title="{{ recipe.imageRecipePath }}">
-          <p>{{ recipe.description }}</p>
+          <h3 class="c-heading--medium">The recipe has been successfully {{ editMode ? 'edited' : 'added'}}!</h3>
+          <h1>{{ name }}</h1>
+          <img class="" [src]="imageRecipePath" alt="{{ imageRecipePath }}" title="{{ imageRecipePath }}">
+          <p>{{ description }}</p>
       </div>
     </div>
   </div>
