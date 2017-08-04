@@ -1,6 +1,6 @@
 <div *ngIf="!name; else formInfo">
   <form class="c-list-data__row row row--no-margin center-xs middle-xs"
-  [formGroup]="rForm" (ngSubmit)="editMode ? addForm(rForm.value) : editForm(rForm.value)">
+  [formGroup]="rForm" (ngSubmit)="editMode ? editForm(rForm.value) : addForm(rForm.value)">
         <div class="col-xs-12 form-col">
           <h3 class="c-heading--medium">{{ editMode ? 'Edit' : 'Add' }} recipe</h3>
         </div>
@@ -29,9 +29,12 @@
     <div class="row">
       <div class="col-xs-12">
           <h3 class="c-heading--medium">The recipe has been successfully {{ editMode ? 'edited' : 'added'}}!</h3>
-          <h1>{{ name }}</h1>
-          <img class="" [src]="imageRecipePath" alt="{{ imageRecipePath }}" title="{{ imageRecipePath }}">
-          <p>{{ description }}</p>
+          <h1>{{ editMode ? recipe.name : name}}</h1>
+          <img class=""
+          [src]="editMode ? recipe.imageRecipePath : imageRecipePath"
+          alt="{{ editMode ? recipe.imageRecipePath : imageRecipePath }}"
+          title="{{ editMode ? recipe.imageRecipePath : imageRecipePath }}">
+          <p>{{ editMode ? recipe.description : description }}</p>
       </div>
     </div>
   </div>

@@ -6,7 +6,7 @@ import { Ingredient } from '../shared/ingredient.model';
 @Injectable()
 export class RecipeService {
 
-    private recipes: Recipe [] = [
+    public recipes: Recipe [] = [
       new Recipe('Lemon Cake',
       'Cupcake ipsum dolor sit amet jelly apple pie sesame snaps biscuit.',
       '/../../assets/images/lemon-cake.jpg'
