@@ -5,20 +5,20 @@
           <h3 class="c-heading--medium">Edit recipe</h3>
         </div>
         <div class="col-xs-12 form-col">
-          <label>Name
+          <label for="name">Name</label>
             <input type="text" formControlName="name">
-          </label>
         </div>
         <div class="col-xs-12 form-col">
-          <label>Description
+          <label for="image">Image</label>
+            <input type="text" formControlName="image">
+        </div>
+        <div class="col-xs-12 form-col">
+          <label for="description">Description</label>
             <textarea formControlName="description"></textarea>
-          </label>
         </div>
         <div *ngIf="!rForm.controls['description'].valid" class="validation-alert">Description is too long.</div>
         <div class="col-xs-12 form-col">
           <button class="c-button c-button--add" [disabled]="!rForm.valid">Save</button>
-        </div>
-        <div class="col-xs-12 form-col">
           <button class="c-button">Cancel</button>
         </div>
   </form>
@@ -28,9 +28,10 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-          <h3 class="c-heading--medium">The recipe has been successfully edited</h3>
-          <h1>{{ name }}</h1>
-          <p>{{ description }}</p>
+          <h3 class="c-heading--medium">The recipe has been successfully edited!</h3>
+          <h1>{{ recipe.name }}</h1>
+          <img class="" [src]="recipe.imageRecipePath" alt="{{ recipe.imageRecipePath }}" title="{{ recipe.imageRecipePath }}">
+          <p>{{ recipe.description }}</p>
       </div>
     </div>
   </div>
