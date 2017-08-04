@@ -40,7 +40,6 @@
                 }
                 &--add {
                     @extend .c-button;
-                    min-width: 9rem;
                     margin-right: 1rem;
                     &:after {
                         background: linear-gradient(to right, $addButtonGradientStartColor 50%, $addButtonGradientEndColor 100%);
@@ -48,7 +47,6 @@
                 }
                 &--delete {
                     @extend .c-button;
-                    min-width: 8rem;
                     margin-right: 1rem;
                     &:after {
                         background: linear-gradient(to right, $deleteButtonGradientStartColor 50%, $deleteButtonGradientEndColor 100%);
@@ -56,7 +54,6 @@
                 }
                 &--clear {
                     @extend .c-button;
-                    min-width: 9rem;
                     &:after {
                         background: linear-gradient(to right, $clearButtonGradientStartColor 50%, $clearButtonGradientEndColor 100%);
                     }
