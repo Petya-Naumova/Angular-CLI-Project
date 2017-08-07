@@ -16,3 +16,30 @@ export class Recipe {
         this.ingredients = ingredients;
     }
 }
+
+
+// import { Ingredient } from '../shared/models';
+
+// export class Recipe {
+//     public name: string;
+//     public description: string;
+//     public imageRecipePath: string;
+//     public backgroundColor: string;
+//     public ingredients: Ingredient[];
+
+//     constructor(rawObject:IRecipeInput) {
+//         this.name = rawObject.name;
+//         this.description = rawObject.description;
+//         this.imageRecipePath = rawObject.imageRecipePath;
+//         this.backgroundColor = rawObject.backgroundColor;
+//         this.ingredients = rawObject.ingredients;
+//     }
+// }
+
+// export interface IRecipeInput{
+//     name: string;
+//     description: string;
+//     imageRecipePath: string;
+//     backgroundColor: string;
+//     ingredients: Array<Ingredient>;
+// }

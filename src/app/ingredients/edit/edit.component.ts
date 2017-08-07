@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { Ingredient } from '../../shared/ingredient.model';
+import { Ingredient } from '../../shared/models';
 import { IngredientsService } from '../ingredients.service';
 
 

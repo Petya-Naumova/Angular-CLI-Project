@@ -5,7 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Recipe } from '../recipe.model';
 import { RecipeService } from './../recipe.service';
-import { Ingredient } from '../../shared/ingredient.model';
+import { Ingredient } from '../../shared/models';
 
 @Component({
   selector: 'app-recipe-edit',
