@@ -1,5 +1,3 @@
-
-
 // Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -33,7 +31,7 @@ import { IngredientsService } from './ingredients/ingredients.service';
     ReactiveFormsModule,
     AppRoutingModule,
     LocalStorageModule.withConfig({
-            prefix: 'my-dream-app',
+            prefix: 'cooking-app',
             storageType: 'localStorage'
         })
   ],
