@@ -11,9 +11,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
-import { IngredientsComponent } from './ingredients/ingredients.component';
-import { EditComponent } from './ingredients/edit/edit.component';
-
 import { IngredientsService } from './ingredients/ingredients.service';
 
 @NgModule({
@@ -21,8 +18,6 @@ import { IngredientsService } from './ingredients/ingredients.service';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    IngredientsComponent,
-    EditComponent,
   ],
   imports: [
     DirectivesModule,

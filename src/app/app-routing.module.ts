@@ -6,6 +6,9 @@ import { IngredientsComponent } from './ingredients/ingredients.component';
 const APP_ROUTES: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full' },
   {
+    path: 'recipes', loadChildren: './recipes/recipes.module#RecipesModule'
+  },
+  {
     path: 'ingredients', loadChildren: './ingredients/ingredients.module#IngredientsModule'
   }
 ];
