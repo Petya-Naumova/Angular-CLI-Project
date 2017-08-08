@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 
 const APP_ROUTES: Routes = [
-  { path: '', redirectTo: '/ingredients', pathMatch: 'full' },
+  { path: '', redirectTo: '/recipes', pathMatch: 'full' },
   {
     path: 'recipes', loadChildren: './recipes/recipes.module#RecipesModule'
   },
