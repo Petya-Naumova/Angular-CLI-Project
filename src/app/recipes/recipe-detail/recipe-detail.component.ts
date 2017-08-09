@@ -3,6 +3,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router'
 
 import { Recipe } from '../recipe.model';
 import { RecipeService } from './../recipe.service';
+import { SharedModule } from '../../shared/shared.module';
 
 @Component({
   selector: 'app-recipe-detail',

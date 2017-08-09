@@ -23,6 +23,11 @@ import { CommonModule } from '@angular/common';
         RecipeListComponent,
         RecipeDetailComponent,
         RecipeItemComponent,
-        RecipeEditComponent]
+        RecipeEditComponent
+      ],
+    exports: [
+        RecipesComponent
+    ],
+    providers: []
 })
 export class RecipesModule { }

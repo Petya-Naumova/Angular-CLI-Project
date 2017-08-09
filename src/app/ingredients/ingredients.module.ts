@@ -6,9 +6,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-
-
-
 @NgModule({
   imports: [
     IngredientsRoutingModule,
@@ -19,7 +16,10 @@ import { FormsModule } from '@angular/forms';
     IngredientsComponent,
     EditComponent
   ],
-  providers: []
+  exports: [
+    IngredientsComponent
+  ],
+   providers: []
 })
 
 export class IngredientsModule {

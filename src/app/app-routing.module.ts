@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 
-import { IngredientsComponent } from './ingredients/ingredients.component';
 
 const APP_ROUTES: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full' },

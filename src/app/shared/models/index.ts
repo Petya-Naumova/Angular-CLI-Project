@@ -1,1 +1,1 @@
-export * from './ingredient.model';
+export * from './ingredient.model'
