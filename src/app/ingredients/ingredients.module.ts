@@ -4,15 +4,13 @@ import { EditComponent } from './edit/edit.component';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   imports: [
     IngredientsRoutingModule,
-    CommonModule,
-    FormsModule
+    CommonModule
   ],
   declarations: [
     IngredientsComponent,
