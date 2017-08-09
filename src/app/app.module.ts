@@ -1,7 +1,7 @@
 // Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { LocalStorageModule } from 'angular-2-local-storage';
@@ -22,7 +22,6 @@ import { IngredientsService } from './ingredients/ingredients.service';
   imports: [
     DirectivesModule,
     BrowserModule,
-    FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     LocalStorageModule.withConfig({
