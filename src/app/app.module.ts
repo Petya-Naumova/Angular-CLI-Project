@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { LocalStorageModule } from 'angular-2-local-storage';
-import { SharedModule } from './shared/shared.module';
+
 
 // Components
 import { AppComponent } from './app.component';
@@ -19,7 +19,6 @@ import { IngredientsService } from './ingredients/ingredients.service';
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    SharedModule,
     LocalStorageModule.withConfig({
       prefix: 'cooking-app',
       storageType: 'localStorage'
