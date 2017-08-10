@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DropDownDirective } from './dropdown.directive';
 
+
 @NgModule({
     imports: [
         CommonModule
@@ -10,7 +11,7 @@ import { DropDownDirective } from './dropdown.directive';
         DropDownDirective,
     ],
     exports: [
-        DropDownDirective,
+        DropDownDirective
     ]
 })
 export class DirectivesModule { }

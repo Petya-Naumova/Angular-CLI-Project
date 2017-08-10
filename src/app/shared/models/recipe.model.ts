@@ -1,4 +1,5 @@
-import { Ingredient } from '../shared/models/ingredient.model';
+import { Ingredient } from './ingredient.model';
+
 
 export class Recipe {
     public name: string;
@@ -18,7 +19,6 @@ export class Recipe {
 }
 
 
-// import { Ingredient } from '../shared/models';
 
 // export class Recipe {
 //     public name: string;
@@ -27,7 +27,7 @@ export class Recipe {
 //     public backgroundColor: string;
 //     public ingredients: Ingredient[];
 
-//     constructor(rawObject:IRecipeInput) {
+//     constructor(rawObject: IRecipeInput) {
 //         this.name = rawObject.name;
 //         this.description = rawObject.description;
 //         this.imageRecipePath = rawObject.imageRecipePath;
@@ -36,7 +36,7 @@ export class Recipe {
 //     }
 // }
 
-// export interface IRecipeInput{
+// export interface IRecipeInput {
 //     name: string;
 //     description: string;
 //     imageRecipePath: string;

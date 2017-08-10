@@ -3,9 +3,9 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { Recipe } from '../recipe.model';
 import { RecipeService } from './../recipe.service';
 import { Ingredient } from '../../shared/models';
+import { Recipe } from '../../shared/models/recipe.model';
 
 @Component({
   selector: 'app-recipe-edit',

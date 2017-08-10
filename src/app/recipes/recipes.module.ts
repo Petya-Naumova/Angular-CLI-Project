@@ -9,13 +9,14 @@ import { RecipesRoutingModule } from './recipes-routing.module';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
     imports: [
         CommonModule,
         ReactiveFormsModule,
-        RecipesRoutingModule
+        RecipesRoutingModule,
+        SharedModule
     ],
     declarations: [
         RecipeStartComponent,
