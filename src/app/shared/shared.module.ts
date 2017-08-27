@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DirectivesModule } from './directives/index';
 import { Recipe, Ingredient } from './models/index';
@@ -6,15 +6,15 @@ import { Recipe, Ingredient } from './models/index';
 @NgModule({
     imports: [
         CommonModule,
-        DirectivesModule,
+        DirectivesModule
     ],
     declarations: [
     ],
     exports: [
       CommonModule,
       DirectivesModule,
-      Ingredient,
-      Recipe
+      Recipe,
+      Ingredient
     ]
 })
 

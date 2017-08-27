@@ -1,5 +1,6 @@
 import { IngredientsRoutingModule } from './ingredients-routing.module';
 import { IngredientsComponent } from './ingredients.component';
+import { SharedModule } from '../shared/shared.module';
 import { EditComponent } from './edit/edit.component';
 
 import { NgModule } from '@angular/core';
@@ -10,7 +11,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     IngredientsRoutingModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   declarations: [
     IngredientsComponent,
