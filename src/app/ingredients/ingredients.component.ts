@@ -1,10 +1,9 @@
 import { SharedModule } from './../shared/shared.module';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
-import { Ingredient } from '../shared/models/ingredient.model';
 
 import { IngredientsService } from './ingredients.service';
-
+import { Ingredient} from './../shared/models'
 
 @Component({
   selector: 'app-ingredients',

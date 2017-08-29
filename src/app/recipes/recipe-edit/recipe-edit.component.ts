@@ -6,6 +6,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RecipeService } from './../recipe.service';
 import { Ingredient } from '../../shared/models';
 import { Recipe } from '../../shared/models/recipe.model';
+import { LocalStorageService } from 'angular-2-local-storage';
+
 
 @Component({
   selector: 'app-recipe-edit',
@@ -42,7 +44,8 @@ export class RecipeEditComponent implements OnInit {
     private recipeService: RecipeService,
     private route: ActivatedRoute,
     private router: Router,
-    private fb: FormBuilder) {
+    private fb: FormBuilder,
+    private localStorageService: LocalStorageService) {
     this.rForm = fb.group({
       'name': [null, Validators.required],
       'imageRecipePath': [null, Validators.required],
