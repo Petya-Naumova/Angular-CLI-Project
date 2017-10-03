@@ -25,6 +25,9 @@ export class IngredientsComponent implements OnInit, OnDestroy {
         }
       );
   }
+  onEditItem(index: number) {
+    this.ingrService.startedEditing.next(index);
+  }
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
