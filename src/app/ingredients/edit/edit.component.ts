@@ -39,7 +39,7 @@ export class EditComponent implements OnInit, OnDestroy {
 
         const newIngredient = new Ingredient(value.name, value.amount);
         if (this.editMode) {
-            this.ingrService.updateIngredients(this.editedItemIndex, newIngredient);
+            this.ingrService.updateIngredient(this.editedItemIndex, newIngredient);
         }
         else {
             this.ingrService.addIngredient(newIngredient);
@@ -51,6 +51,11 @@ export class EditComponent implements OnInit, OnDestroy {
     onClear() {
         this.ingredientsForm.reset();
         this.editMode = false;
+    }
+
+    onDelete() {
+        this.ingrService.deleteIngredient(this.editedItemIndex);
+        this.onClear();
     }
 
     ngOnDestroy() {

@@ -19,7 +19,11 @@
                         [disabled]="!form.valid">
                         {{ editMode ? 'Update' : 'Add'}}
                     </button>
-                    <button class="c-button--delete" type="button">Delete</button>
+                    <button 
+                        class="c-button--delete" 
+                        type="button"
+                        (click)="onDelete()"
+                        *ngIf="editMode">Delete</button>
                     <button 
                         class="c-button--clear" 
                         type="button"

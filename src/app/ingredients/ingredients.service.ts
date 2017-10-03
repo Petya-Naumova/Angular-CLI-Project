@@ -31,9 +31,15 @@ export class IngredientsService {
     this.ingredientsChanged.next(this.ingredients.slice());
   }
 
-  updateIngredients(index: number, newIngredient: Ingredient) {
+  updateIngredient(index: number, newIngredient: Ingredient) {
     this.ingredients[index] = newIngredient;
     this.ingredientsChanged.next(this.ingredients.slice());
-
   }
+
+  deleteIngredient(index: number) {
+    this.ingredients.splice(index, 1);
+    this.ingredientsChanged.next(this.ingredients.slice());
+  }
+
+
 }
