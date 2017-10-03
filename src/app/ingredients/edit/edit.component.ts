@@ -34,13 +34,27 @@ export class EditComponent implements OnInit, OnDestroy {
         );
     }
 
-    onAddItem(form: NgForm) {
+    onSubmitItem(form: NgForm) {
         const value = form.value;
 
         const newIngredient = new Ingredient(value.name, value.amount);
-        this.ingrService.addIngredient(newIngredient);
+        if (this.editMode) {
+            this.ingrService.updateIngredients(this.editedItemIndex, newIngredient);
+        }
+        else {
+            this.ingrService.addIngredient(newIngredient);
+        }
+        this.editMode = false;
+        form.reset();
     }
+
+    onClear() {
+        this.ingredientsForm.reset();
+        this.editMode = false;
+    }
+
     ngOnDestroy() {
         this.subscription.unsubscribe();
     }
+
 }
