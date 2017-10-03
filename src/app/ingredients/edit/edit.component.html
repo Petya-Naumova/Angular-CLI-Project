@@ -4,16 +4,16 @@
             <div class="row row--no-margin first-xs">
                 <div class="col-xs-5 col-sm-8">
                     <label for="name">Name</label>
-                    <input type="text" name="name" ngModel>
+                    <input type="text" id="name" name="name" ngModel required>
                 </div>
                 <div class="col-xs-2 col-sm-4">
                     <label for="amount">Amount</label>
-                    <input type="number" name="amount" ngModel>
+                    <input type="number" id="amount" name="amount" ngModel required pattern="^[1-9]+[0+9]*$">
                 </div>
             </div>
             <div class="row first-xs buttons-container">
                 <div class="col-xs-12" style="margin-left: 2rem;">
-                    <button class="c-button--add" type="submit">Add</button>
+                    <button class="c-button--add" type="submit" [disabled]="!form.valid">Add</button>
                     <button class="c-button--delete" type="button">Delete</button>
                     <button class="c-button--clear" type="button">Clear</button>
                 </div>
