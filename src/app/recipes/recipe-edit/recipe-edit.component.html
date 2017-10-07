@@ -1,5 +1,5 @@
-<div *ngIf="!name; else formInfo">
-  <form class="c-list-data__row row row--no-margin center-xs middle-xs">
+<div>
+  <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()" class="c-list-data__row row row--no-margin center-xs middle-xs">
         <div class="col-xs-12 form-col">
           <h3 class="c-heading--medium">{{ editMode ? 'Edit' : 'Add' }} recipe</h3>
         </div>
@@ -7,63 +7,97 @@
           <label for="name">Name</label>
             <input 
               id="name"
+              formControlName="name"
               type="text">
         </div>
         <div class="col-xs-12 form-col">
           <label for="imageRecipePath">Image URL</label>
               <input 
-                type="text" 
-                id="imageRecipePath">
+                type="text"
+                formControlName="imageRecipePath"
+                id="imageRecipePath"
+                #imagePath>
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12">
-                <h3 class="c-heading--medium">The recipe has been successfully {{ editMode ? 'edited' : 'added'}}!</h3>
-                <h1>{{ editMode ? recipe.name : name}}</h1>
-                <img class=""
-                [src]="editMode ? recipe.imageRecipePath : imageRecipePath"
-                alt="{{ editMode ? recipe.imageRecipePath : imageRecipePath }}"
-                title="{{ editMode ? recipe.imageRecipePath : imageRecipePath }}">
-                <p>{{ editMode ? recipe.description : description }}</p>
-            </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <img
+              [src]="imagePath.value"
+              class="recipe-details-image">
           </div>
         </div>
         <div class="col-xs-12 form-col">
           <label for="description">Description</label>
             <textarea
               type="text"
+              formControlName="description"
               id="description"
               rows="6">
             </textarea>
         </div>
-          <div class="col-xs-12 form-col">
-            <div class="row">
+          <div class="col-xs-12 form-col" formArrayName="ingredients">
+            <div class="row"
+                 *ngFor="let ingredientCtrl of recipeForm.get('ingredients').controls; let i = index"
+                 [formGroupName]="i">
               <div class="col-xs-8 form-col">
                   <label for="">
                       <input
                         type="text"
-                        id="">
+                        formControlName="name">
                     </label>
               </div>
               <div class="col-xs-3 edit__number-holder form-col">
                   <label for="">
                       <input
                         type="number"
-                        id="">
+                        formControlName="amount">
                     </label>
               </div>
               <div class="col-xs-1 edit__delete-button-holder form-col">
-                  <button 
-                    class="c-button--delete-small">
+                  <button
+                    type="button"
+                    class="c-button--delete-small"
+                    (click)="onDeleteIngredient(i)">
                     X
                   </button>
               </div>
             </div>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12">
+                <button
+                  type="button"
+                  class="c-button--add" (click)="onAddIngredient()">
+                  Add Ingredient
+                </button>
+              </div>
+            </div>
           </div>
-          <div *ngIf="!rForm.controls['description'].valid" class="validation-alert">Description is too long.</div>
+          <!-- <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                  <h3 class="c-heading--medium">The recipe has been successfully {{ editMode ? 'edited' : 'added'}}!</h3>
+                  <h1>{{ editMode ? recipe.name : name}}</h1>
+                  <img class=""
+                  [src]="editMode ? recipe.imageRecipePath : imageRecipePath"
+                  alt="{{ editMode ? recipe.imageRecipePath : imageRecipePath }}"
+                  title="{{ editMode ? recipe.imageRecipePath : imageRecipePath }}">
+                  <p>{{ editMode ? recipe.description : description }}</p>
+              </div>
+            </div>
+          </div> -->
+          <!-- <div class="validation-alert">Description is too long.</div> -->
           <div class="col-xs-12 form-col">
-            <button class="c-button c-button--add" [disabled]="!rForm.valid">Save</button>
-            <button class="c-button">Cancel</button>
+            <button 
+              type="submit" 
+              class="c-button c-button--add"
+              [disabled]="!recipeForm.valid">
+              Save
+            </button>
+            <button 
+              class="c-button"
+              (click)="onCancel()">
+              Cancel
+            </button>
           </div>
   </form>
 </div>

@@ -1,7 +1,11 @@
 <div class="c-list-data__row row row--no-margin center-xs" [style.backgroundColor]="recipe.backgroundColor">
     <div class="col-xs-12">
       <div class="row center-xs middle-xs">
-        <img class="recipe-details-image" [src]="recipe.imageRecipePath" alt="{{ recipe.name }}" title="{{ recipe.name }}">
+        <img 
+            class="recipe-details-image" 
+            [src]="recipe.imageRecipePath" 
+            alt="{{ recipe.name }}" 
+            title="{{ recipe.name }}">
       </div>
     </div>
 </div>
@@ -28,7 +32,7 @@
                 </a>
             </li>
             <li class="dropdown-menu--item">
-                <a>
+                <a (click)="onDeleteRecipe()">
                     Delete Recipe
                 </a>
             </li>

@@ -3,8 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { LocalStorageModule } from 'angular-2-local-storage';
+import { RecipeService } from './recipes/recipe.service';
 
 
 // Components
@@ -19,6 +21,8 @@ import { IngredientsService } from './ingredients/ingredients.service';
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     LocalStorageModule.withConfig({
       prefix: 'cooking-app',
       storageType: 'localStorage'
@@ -29,7 +33,7 @@ import { IngredientsService } from './ingredients/ingredients.service';
     HeaderComponent,
     FooterComponent,
   ],
-  providers: [IngredientsService],
+  providers: [IngredientsService, RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
