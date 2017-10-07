@@ -1,6 +1,5 @@
 <div *ngIf="!name; else formInfo">
-  <form class="c-list-data__row row row--no-margin center-xs middle-xs"
-  [formGroup]="rForm" (ngSubmit)="editMode ? editForm(rForm.value) : addForm(rForm.value)">
+  <form class="c-list-data__row row row--no-margin center-xs middle-xs">
         <div class="col-xs-12 form-col">
           <h3 class="c-heading--medium">{{ editMode ? 'Edit' : 'Add' }} recipe</h3>
         </div>
@@ -8,21 +7,33 @@
           <label for="name">Name</label>
             <input 
               id="name"
-              type="text" 
-              formControlName="name">
+              type="text">
         </div>
         <div class="col-xs-12 form-col">
-          <label for="imageRecipePath">Image</label>
+          <label for="imageRecipePath">Image URL</label>
               <input 
                 type="text" 
-                id="imageRecipePath" 
-                formControlName="imageRecipePath">
+                id="imageRecipePath">
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+                <h3 class="c-heading--medium">The recipe has been successfully {{ editMode ? 'edited' : 'added'}}!</h3>
+                <h1>{{ editMode ? recipe.name : name}}</h1>
+                <img class=""
+                [src]="editMode ? recipe.imageRecipePath : imageRecipePath"
+                alt="{{ editMode ? recipe.imageRecipePath : imageRecipePath }}"
+                title="{{ editMode ? recipe.imageRecipePath : imageRecipePath }}">
+                <p>{{ editMode ? recipe.description : description }}</p>
+            </div>
+          </div>
         </div>
         <div class="col-xs-12 form-col">
           <label for="description">Description</label>
             <textarea
-              id="description" 
-              formControlName="description">
+              type="text"
+              id="description"
+              rows="6">
             </textarea>
         </div>
           <div class="col-xs-12 form-col">
@@ -42,31 +53,19 @@
                     </label>
               </div>
               <div class="col-xs-1 edit__delete-button-holder form-col">
-                  <button class="c-button--delete-small">X</button>
+                  <button 
+                    class="c-button--delete-small">
+                    X
+                  </button>
               </div>
             </div>
           </div>
- 
-        <div *ngIf="!rForm.controls['description'].valid" class="validation-alert">Description is too long.</div>
-        <div class="col-xs-12 form-col">
-          <button class="c-button c-button--add" [disabled]="!rForm.valid">Save</button>
-          <button class="c-button">Cancel</button>
-        </div>
+          <div *ngIf="!rForm.controls['description'].valid" class="validation-alert">Description is too long.</div>
+          <div class="col-xs-12 form-col">
+            <button class="c-button c-button--add" [disabled]="!rForm.valid">Save</button>
+            <button class="c-button">Cancel</button>
+          </div>
   </form>
 </div>
 
-<ng-template #formInfo>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-          <h3 class="c-heading--medium">The recipe has been successfully {{ editMode ? 'edited' : 'added'}}!</h3>
-          <h1>{{ editMode ? recipe.name : name}}</h1>
-          <img class=""
-          [src]="editMode ? recipe.imageRecipePath : imageRecipePath"
-          alt="{{ editMode ? recipe.imageRecipePath : imageRecipePath }}"
-          title="{{ editMode ? recipe.imageRecipePath : imageRecipePath }}">
-          <p>{{ editMode ? recipe.description : description }}</p>
-      </div>
-    </div>
-  </div>
-</ng-template>
+

@@ -38,6 +38,7 @@ export class EditComponent implements OnInit, OnDestroy {
         const value = form.value;
 
         const newIngredient = new Ingredient(value.name, value.amount);
+        
         if (this.editMode) {
             this.ingrService.updateIngredient(this.editedItemIndex, newIngredient);
         }
