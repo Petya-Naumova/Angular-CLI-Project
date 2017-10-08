@@ -1,4 +1,4 @@
-<div class="c-list-data__row row row--no-margin center-xs" [style.backgroundColor]="recipe.backgroundColor">
+<div *ngIf="recipe" class="c-list-data__row row row--no-margin center-xs" [style.backgroundColor]="recipe.backgroundColor">
     <div class="col-xs-12">
       <div class="row center-xs middle-xs">
         <img 
@@ -9,7 +9,7 @@
       </div>
     </div>
 </div>
-<div class="row recipe-details-row--name">
+<div *ngIf="recipe" class="row recipe-details-row--name">
     <div class="col-xs-12">
         <h1 title="{{ recipe.name }}" class="c-heading--heading">{{ recipe.name }}</h1>
     </div>
@@ -39,12 +39,12 @@
         </ul>
     </div>
 </div>
-<div class="row recipe-details-row">
+<div *ngIf="recipe" class="row recipe-details-row">
     <div class="col-xs-12">
         {{ recipe.description }}
     </div>
 </div>
-<div class="row recipe-details-row">
+<div *ngIf="recipe" class="row recipe-details-row">
     <div class="col-xs-12">
         <h4 class="c-heading--medium">Ingredients</h4>
         <ul class="list-group">

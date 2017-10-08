@@ -6,15 +6,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { LocalStorageModule } from 'angular-2-local-storage';
-import { RecipeService } from './recipes/recipe.service';
+import { HttpModule } from '@angular/http';
 
+import { RecipeService } from './recipes/recipe.service';
+import { IngredientsService } from './ingredients/ingredients.service';
+import { DataStorageService } from './shared/data-storage.service';
 
 // Components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-
-import { IngredientsService } from './ingredients/ingredients.service';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { IngredientsService } from './ingredients/ingredients.service';
     ReactiveFormsModule,
     AppRoutingModule,
     FormsModule,
+    HttpModule,
     ReactiveFormsModule,
     LocalStorageModule.withConfig({
       prefix: 'cooking-app',
@@ -33,7 +35,7 @@ import { IngredientsService } from './ingredients/ingredients.service';
     HeaderComponent,
     FooterComponent,
   ],
-  providers: [IngredientsService, RecipeService],
+  providers: [IngredientsService, RecipeService, DataStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

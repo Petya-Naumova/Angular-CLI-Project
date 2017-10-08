@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router'
 import { RecipeService } from './../recipe.service';
 import { Recipe } from '../../shared/models/recipe.model';
+import { DataStorageService } from './../../shared/data-storage.service';
+import { Response } from '@angular/http';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -14,8 +16,8 @@ export class RecipeDetailComponent implements OnInit {
   constructor(
     private recipeService: RecipeService,
     private route: ActivatedRoute,
-    private router: Router) {
-
+    private router: Router,
+    private dataStorageService: DataStorageService) {
    }
 
   ngOnInit() {
@@ -23,7 +25,7 @@ export class RecipeDetailComponent implements OnInit {
     .subscribe(
       (params: Params) => {
         this.id = params['id'];
-        this.recipe = this.recipeService.getRecipeByIndex(this.id);
+        this.fetchSelectedRecipe();
       }
     );
   }
@@ -35,8 +37,17 @@ export class RecipeDetailComponent implements OnInit {
     // this.router.navigate(['edit'], { relativeTo: this.route });
     this.router.navigate(['../', this.id, 'edit'], { relativeTo: this.route } );
   }
+  fetchSelectedRecipe() {
+    this.recipe = this.recipeService.getRecipeByIndex(this.id);
+  }
   onDeleteRecipe() {
     this.recipeService.deleteRecipe(this.id);
+    this.dataStorageService.storeRecipes()
+    .subscribe(
+      (response: Response) => {
+        console.log(response);
+      }
+    )
     this.router.navigate(['/recipes']);
   }
 }
